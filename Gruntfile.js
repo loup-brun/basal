@@ -29,79 +29,95 @@ module.exports = function(grunt) {
 				separator: ';',
 				banner: '<%= banner %>'
 			},
-				main: {
-					// concatenate libraries with general.js > main.js
-					src: [
-						'<%= paths.lib %>',
+			main: {
+				// concatenate libraries with general.js > main.js
+				src: [
+					'<%= paths.lib %>',
 
-						'<%= paths.js.src %>/custom.js'
-					],
-					dest: 
-					'<%= paths.js.dist %>main.js'
-				}
+					'<%= paths.js.src %>/custom.js'
+				],
+				dest: 
+				'<%= paths.js.dist %>main.js'
+			}
+		},
+
+		// minify the sources
+		uglify: {
+			js: {
+				files: [
+					{
+						'<%= paths.js.dist %>main.min.js': [
+							'<%= paths.js.dist %>main.js'
+						]
+					}
+				]
+			}
+		},
+
+		sass: {
+			// compile different stylesheets to be loaded async
+			main: {
+				files: {
+					'<%= paths.css.dist %>main.css': '<%= paths.css.src %>main.scss'
+				},
 			},
 
-			// minify the sources
-			uglify: {
-				js: {
-					files: [
-						{
-							'<%= paths.js.dist %>main.min.js': [
-								'<%= paths.js.dist %>main.js'
-							]
-						}
-					]
-				}
-			},
+			// pass in the options object for sass
+			options: {
+				style: 'compressed',
+				sourcemap: 'true'
+			}
+		},
 
+		copy: {
+			main: {
+				files: [
+					{ // copy inline css files into `_includes` directory
+						expand: true,
+						flatten: true,
+						src: [
+							''
+						],
+						dest: ''
+					}
+				]
+			}
+		},
+
+		// watch: rebuild parts of site on file change
+		watch: {
 			sass: {
-				// compile different stylesheets to be loaded async
-				main: {
-					files: {
-						'<%= paths.css.dist %>main.css': '<%= paths.css.src %>main.scss'
-					},
-				},
-
-				// pass in the options object for sass
-				options: {
-					style: 'compressed',
-					sourcemap: 'true'
-				}
+				files: ['<%= paths.css.src %>**/*.scss'],
+				tasks: ['sass']
 			},
 
-			copy: {
-				main: {
-					files: [
-						{ // copy inline css files into `_includes` directory
-							expand: true,
-							flatten: true,
-							src: [
-								''
-							],
-							dest: ''
-						}
-					]
-				}
+			js: {
+				files: ['<%= paths.js.src %>/*.js'],
+				tasks: ['concat', 'uglify']
 			},
 
-			// watch: rebuild parts of site on file change
-			watch: {
-				sass: {
-					files: ['<%= paths.css.src %>**/*.scss'],
-					tasks: ['sass']
-				},
-
-				js: {
-					files: ['<%= paths.js.src %>/*.js'],
-					tasks: ['concat', 'uglify']
-				},
-
-				html: {
-					files: ['<%= paths.html.src %>/*.html'],
-					tasks: ['handlebars']
-				}
-			},
-
-
-		};
+			html: {
+				files: ['<%= paths.html.src %>/*.html'],
+				tasks: ['handlebars']
+			}
+		}
 	};
+	
+	grunt.registerTask(
+		'build',
+		'Build the stylesheet and the scripts',
+		[
+			'sass',
+			//'concat',
+			//'uglify'
+		]
+	);
+	
+	grunt.registerTask(
+		'default',
+		'Run the build task',
+		['build']
+	);
+	
+	
+};
