@@ -46,12 +46,12 @@ $font-size-sm:							$font-size * 0.8;
 $line-height:								1.6;
 
 // headings
-$h1: 												$font-size + 30;
-$h2: 												$font-size + 22;
-$h3: 												$font-size + 14;
-$h4: 												$font-size + 8;
-$h5: 												$font-size + 6;
-$h6: 												$font-size + 2;
+$font-size-h1: 							$font-size + 30;
+$font-size-h2: 							$font-size + 22;
+$font-size-h3: 							$font-size + 14;
+$font-size-h4: 							$font-size + 8;
+$font-size-h5: 							$font-size + 6;
+$font-size-h6: 							$font-size + 2;
 
 // Standard spacings
 $spacing-xs:								$font-size * 0.5;
