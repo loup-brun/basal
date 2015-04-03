@@ -8,7 +8,7 @@
   },
   "authors": [
     "Matthew Hartman <hello@matthewhartman.com.au>",
-		"Louis-Olivier Brassard <louis.oli.br@gmail.com>"
+    "Louis-Olivier Brassard <louis.oli.br@gmail.com>"
   ],
   "description": "Base is a super simple, responsive framework, built to work on all devices big, small and in-between.",
   "keywords": [
@@ -34,7 +34,6 @@
     "grunt-contrib-sass": "^0.9.2",
     "grunt-contrib-uglify": "^0.8.1",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-release": "^0.12.0",
     "load-grunt-tasks": "^3.1.0"
   }
 }

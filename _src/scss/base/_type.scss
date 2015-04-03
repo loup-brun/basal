@@ -6,7 +6,7 @@ body {
   font-family: $font-family-body;
 	font-size: $font-size;
 	line-height: $line-height;
-  color: $font-color;
+  color: $color-text;
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 0 $spacing-xs;
 	line-height: normal;
 	font-weight: normal;
-	font-family: $font-family-h;
+	font-family: $font-family-heading;
 }
 
 h1, .h1 {

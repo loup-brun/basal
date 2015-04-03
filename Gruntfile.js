@@ -1,8 +1,9 @@
-/* global module, require */
 module.exports = function(grunt) {
-	require('load-grunt-tasks');
 
-	grunt.initConfig({
+	require('load-grunt-tasks')(grunt);
+
+	// Grunt big config object with tasks options
+	var config = {
 		pkg: grunt.file.readJSON('package.json'),
 
 		banner:
@@ -12,23 +13,23 @@ module.exports = function(grunt) {
 		' * @description <% pkg.description %> \n' +
 		' * @license <% pkg.license %> \n' +
 		' */ ',
-		
+
 		// TODO: implement release task
 		//release: {},
 
 		paths: {
 			assets: 'assets/',
-			source: '_src',
+			source: '_src/',
 			css: {
-				src: '<%= paths.src %>scss/',
+				src: '<%= paths.source %>scss/',
 				dist: '<%= paths.assets %>css/'
 			},
 			js: {
-				src: '<%= paths.src %>js/',
+				src: '<%= paths.source %>js/',
 				dist: '<%= paths.assets %>js/'
 			}
 		},
-		
+
 		concat: {
 			options: {
 				separator: ';',
@@ -62,15 +63,20 @@ module.exports = function(grunt) {
 		sass: {
 			// compile different stylesheets to be loaded async
 			main: {
-				files: {
-					'<%= paths.css.dist %>main.css': '<%= paths.css.src %>main.scss'
-				},
+				files: [{
+					expand: true,
+					cwd: '<%= paths.css.src %>',
+					src: ['*.scss'],
+					dest: '<%= paths.css.dist %>',
+					ext: '.css'
+				}]
+
 			},
 
 			// pass in the options object for sass
 			options: {
 				style: 'compressed',
-				sourcemap: 'true'
+				sourcemap: 'file'
 			}
 		},
 
@@ -101,8 +107,11 @@ module.exports = function(grunt) {
 				tasks: ['concat', 'uglify']
 			}
 		}
-	});
-	
+	};
+
+	// Pass in the big config object to initialize Grunt
+	grunt.initConfig(config);
+
 	grunt.registerTask(
 		'build',
 		'Build the stylesheet and the scripts',
@@ -112,12 +121,12 @@ module.exports = function(grunt) {
 			//'uglify'
 		]
 	);
-	
+
 	grunt.registerTask(
 		'default',
 		'Run the build task',
 		['build']
 	);
-	
-	
+
+
 };

@@ -4,11 +4,11 @@
 
 @mixin grid($_prefix:false) {
 	
+	$prefix: '';
+	
 	// Add hyphen to prefix, otherwise just output an empty string 
-	@if ($_prefix) {
-		$prefix = '#{$_prefix}-';
-	} @else {
-		$prefix = '';
+	@if ($_prefix != false) {
+		$prefix: '#{$_prefix}-';
 	}
 
 	@for $i from 1 through $columns {

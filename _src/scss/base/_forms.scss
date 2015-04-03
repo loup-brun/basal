@@ -31,7 +31,7 @@ input[type=email],
 input[type=search], 
 input[type=tel],
 textarea {
-  padding: $spacing-xm;
+  padding: $spacing-xs;
   -webkit-appearance: none; // Remove Default Browser Behaviour for Safari
   -moz-appearance: none; // Remove Default Browser Behaviour for Firefox
 	font-style: normal;
