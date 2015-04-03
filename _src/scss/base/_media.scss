@@ -1,0 +1,21 @@
+// ==========================================================================
+// Base – Media
+// ==========================================================================
+
+
+// Images
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+svg:not(:root) { overflow: hidden; }
+figure { margin: 0; }
+
+// Audio
+audio, canvas, video {
+  @extend .inline-block;
+}
+audio:not([controls]) {
+  @extend .none;
+  height: 0;
+}
