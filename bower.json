@@ -1,6 +1,6 @@
 {
   "name": "base",
-  "version": "1.8.9",
+  "version": "1.10.0",
   "homepage": "http://matthewhartman.github.io/base/",
   "repository": {
     "type": "git",
@@ -8,7 +8,7 @@
   },
   "authors": [
     "Matthew Hartman <hello@matthewhartman.com.au>",
-		"Louis-Olivier Brassard <louis.oli.br@gmail.com>"
+    "Louis-Olivier Brassard <louis.oli.br@gmail.com>"
   ],
   "description": "Base is a super simple, responsive framework, built to work on all devices big, small and in-between.",
   "keywords": [
@@ -29,6 +29,7 @@
   ],
   "devDependencies": {},
   "dependencies": {
-    "headjs": "~1.0.3"
+    "headjs": "~1.0.3",
+    "ondomready": "~1.4.0"
   }
 }

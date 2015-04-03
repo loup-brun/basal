@@ -15,18 +15,32 @@ module.exports = function(grunt) {
 		' */ ',
 
 		// TODO: implement release task
-		//release: {},
+		version: {
+			project: {
+				src: ['package.json', 'bower.json']
+			},
+
+			scss: {
+				options: {
+					prefix: '@version\\s*'
+				},
+				src: ['<%= paths.css.src %>*.scss']
+			}
+		},
 
 		paths: {
 			assets: 'assets/',
-			source: '_src/',
+			source: 'src/',
+			distribution: 'dist/',
 			css: {
 				src: '<%= paths.source %>scss/',
-				dist: '<%= paths.assets %>css/'
+				dist: '<%= paths.distribution %>css/',
+				asst: '<%= paths.assets %>js/'
 			},
 			js: {
 				src: '<%= paths.source %>js/',
-				dist: '<%= paths.assets %>js/'
+				dist: '<%= paths.distribution %>js/',
+				asst: '<%= paths.assets %>css/'
 			}
 		},
 
@@ -38,7 +52,7 @@ module.exports = function(grunt) {
 			main: {
 				// concatenate libraries with general.js > main.js
 				src: [
-					'<%= paths.lib %>',
+					'<%= paths.lib %>ondomready/ondomready.js',
 
 					'<%= paths.js.src %>/custom.js'
 				],
@@ -87,9 +101,16 @@ module.exports = function(grunt) {
 						expand: true,
 						flatten: true,
 						src: [
-							''
+							'<%= paths.js.dist %>*.js'
 						],
-						dest: ''
+						dest: '<%= paths.js.asst %>'
+					},{
+						expand: true,
+						flatten: true,
+						src: [
+							'<%= paths.css.dist %>*.css'
+						],
+						dest: '<%= paths.css.asst %>'
 					}
 				]
 			}
@@ -117,8 +138,9 @@ module.exports = function(grunt) {
 		'Build the stylesheet and the scripts',
 		[
 			'sass',
-			//'concat',
-			//'uglify'
+			'concat',
+			'uglify',
+			'copy'
 		]
 	);
 
@@ -127,6 +149,5 @@ module.exports = function(grunt) {
 		'Run the build task',
 		['build']
 	);
-
 
 };
