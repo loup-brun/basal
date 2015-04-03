@@ -1,6 +1,9 @@
 // ==========================================================================
 // Base – Grid
 // ==========================================================================
+
+@import 'mixins/mixins.grid';
+
 .section { position: relative; }
 
 // Containers
@@ -11,34 +14,31 @@
   margin-right: auto;
 }
 .container-full {
+	@incluide horizontal-margin(auto);
   max-width: $desktop-container;
-  margin-left: auto;
-  margin-right: auto;
 }
+
+@include grid();
 
 // Rows
 .row {
 	@include clearfix;
-	@include vertical-padding($gutter);
+	position: relative;
 }
+
+.row-space { @include vertical-padding($spacing-xl); }
 
 // Columns
 .col {
 	@include horizontal-padding($gutter);
   float: left;
+	position: relative;
 }
-[class*="pull-"], [class*="push-"] { position: relative; }
+
+.no-push { left: auto }
 
 .no-gutter {
-	@incliude horizontal-padding: 0;
+	@include horizontal-padding(0);
 }
 
-
-.row-0 { @include vertical-padding(0); }
-.row-sm { @include vertical-padding($spacing-sm); }
-.row-lg { @include vertical-padding($spacing-xl); }
-.row-xl { @include vertical-padding(2 * $spacing-xl); }
-
 .no-desktop { display: none; }
-
-@import "../_desktop-styles"; // Import Custom Desktop Styles

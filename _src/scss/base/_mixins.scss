@@ -2,6 +2,16 @@
 // Base – Mixins
 // ==========================================================================
 
+// Functions
+
+@function check-background($color) {
+	@if (lightness($color) > 66) {
+		@return $gray-darker; // Lighter background, return dark color
+	} @else {
+		@return #fff; // Darker background, return light color
+	}
+}
+
 // Vendor prefixes
 
 // Prefixer
@@ -19,7 +29,7 @@
 
 @mixin border-radius($radius) {
 	@include prefix(border-radius, $radius, 'webkit' 'moz')
-}
+		}
 
 @mixin border-radius-separate($top-left-radius, $top-right-radius, $bottom-right-radius, $bottom-left-radius) {
 	@include prefix(border-top-left-radius, $top-left-radius, 'webkit' 'moz');
@@ -74,6 +84,12 @@
 
 // Shorthands
 
+@mixin mquery($width) {
+	@media screen and (max-width: $width) {
+		@content;
+	}
+}
+
 @mixin size($width, $height) {
 	width: $width;
 	height: $height;
@@ -97,6 +113,16 @@
 @mixin vertical-padding($value) {
 	padding-top: $value;
 	padding-bottom: $value;
+}
+
+@mixin vertical-margin($value) {
+	margin-top: $value;
+	margin-bottom: $value;
+}
+
+@mixin horizontal-margin($value) {
+	margin-left: $value;
+	margin-right: $value;
 }
 
 @mixin clearfix {
@@ -126,15 +152,6 @@
 			url($file-name + '.svg##{$font-name}')  format('svg');
 		font-weight: $weight;
 		font-style: $style;
-	}
-}
-
-// Functions
-@function check-background($color) {
-	@if (lightness($color) > 66) {
-		@return $gray-darker; // Lighter background, return dark color
-	} @else {
-		@return #fff; // Darker background, return light color
 	}
 }
 
