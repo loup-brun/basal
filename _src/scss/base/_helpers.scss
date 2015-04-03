@@ -94,8 +94,6 @@
 	.tablet-text-left { text-align: left }
 	.tablet-text-right { text-align: right }
 	.tablet-text-center { text-align: center }
-
-
 }
 
 @include mquery($breakpoint-phone) {
