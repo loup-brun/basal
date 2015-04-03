@@ -1,3 +1,4 @@
+/* global module, require */
 module.exports = function(grunt) {
 	require('load-grunt-tasks');
 
@@ -11,6 +12,11 @@ module.exports = function(grunt) {
 		' * @description <% pkg.description %> \n' +
 		' * @license <% pkg.license %> \n' +
 		' */ ',
+		
+		// TODO: implement release task
+		release: {
+			
+		},
 
 		paths: {
 			assets: 'assets/',
@@ -72,7 +78,7 @@ module.exports = function(grunt) {
 		copy: {
 			main: {
 				files: [
-					{ // copy inline css files into `_includes` directory
+					{
 						expand: true,
 						flatten: true,
 						src: [

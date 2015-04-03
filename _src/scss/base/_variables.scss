@@ -2,34 +2,68 @@
 // Base – Global Variables
 // ==========================================================================
 
-// Container Defaults
-$mobile-container:   100%;
-$tablet-container:   720px;
-$desktop-container:  960px;
+// Variables
+// -----------------------------------------------
 
+$baseUrl:										''; // for when building the site with a prefixed url (e.g. /blog)
 
-// Resonsive Design Break Points
-$mobile-breakpoint:  ($tablet-container + 19px);
-$tablet-breakpoint:  ($tablet-container + 20px);
-$desktop-breakpoint: ($desktop-container);
+// Layout
+$width-container:						680px;
+$width-container-lg:				$width-container; // maybe make a larger container later
 
-// Default Fonts
-$default-font-family:      sans-serif;
-$default-code-font-family: 'courier new', monospace, serif;
+// Responsive breakpoints
+$breakpoint-lg:							1350px;
+$breakpoint-tablet:					760px;
+$breakpoint-phone:					480px;
 
-// Font Size Defaults
-$h1: 40;
-$h2: 32;
-$h3: 26;
-$h4: 20;
-$h5: 18;
-$h6: 16;
+// Colors
+$green:										#2fa23a;
+$red:											#be1c37;
 
-$default-font-size:   16;
-$default-line-height: 21;
+// Grays
+$gray-lighter:							#eee;
+$gray-light:								#ccc;
+$gray:											#999;
+$gray-dark:									#666;
+$gray-darker:								#111;
 
-// Default Colours
-$default-font-color:          #434343;
-$default-link-color:          #27ae61;
-$default-button-color:        #e74b3c;
-$default-button-hover-color:  #f43f3f;
+$color-primary:							$green;
+$color-link:								$color-primary;
+$color-danger:							$red;
+
+$color-bg-page:							#fff;
+$color-text:								$gray-darker;
+
+// Type
+$font-family-serif:					serif;
+$font-family-sans-serif:		sans-serif;
+$font-family-monospace:			monospace;
+$font-family-body:					$font-family-serif;
+$font-family-heading:				$font-family-sans-serif;
+
+$font-size: 								16px;
+$font-size-sm:							$font-size * 0.8;
+$line-height:								1.6;
+
+// headings
+$h1: 												$font-size + 30;
+$h2: 												$font-size + 22;
+$h3: 												$font-size + 14;
+$h4: 												$font-size + 8;
+$h5: 												$font-size + 6;
+$h6: 												$font-size + 2;
+
+// Standard spacings
+$spacing-xs:								$font-size * 0.5;
+$spacing-sm:								$font-size-sm;
+$spacing:										$font-size;
+$spacing-lg:								$font-size * 1.5;
+$spacing-xl:								$font-size * 2.5;
+
+// Grid
+$columns:										12;
+$gutter:										$spacing-sm;
+
+// z-index
+$z-index-component:					10;
+$z-index-tooltip:						20;
