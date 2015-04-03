@@ -40,9 +40,14 @@
 
 // Rows
 .row {
-  padding-top: 1em;
-  padding-bottom: 1em;
+	@include clearfix;
+	@include vertical-padding($spacing);
 }
+
+.row-0 { @include vertical-padding(0); }
+.row-sm { @include vertical-padding($spacing-sm); }
+.row-lg { @include vertical-padding($spacing-xl); }
+.row-xl { @include vertical-padding(2 * $spacing-xl); }
 
 .no-desktop { display: none; }
 

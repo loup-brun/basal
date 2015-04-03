@@ -1,6 +1,7 @@
 // ==========================================================================
 // Base – Forms
 // ==========================================================================
+
 fieldset {
   border: 0;
   padding: 0;
@@ -97,7 +98,21 @@ input::-moz-focus-inner {
   padding: 0;
 }
 
+// Horizontal Rule
+hr {
+  border: 0;
+  background: none;
+  outline: 0;
+  background-color: #ddd;
+  margin: 2em 0;
+  *margin: 1em 0;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 1px;
+}
+
 .group-form {
 	position: relative;
 	margin-bottom: $spacing-xs;
 }
+

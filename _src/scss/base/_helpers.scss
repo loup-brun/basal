@@ -2,6 +2,8 @@
 // Base – CSS Helpers / Extras
 // ==========================================================================
 
+.clearfix { @include clearfix }
+
 // Floats
 .left { float: left; }
 .right { float: right; }
