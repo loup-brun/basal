@@ -2,4 +2,7 @@
 // Mobile Custom Styles
 // ==========================================================================
 
-// your styles go here...
+@include mquery($breakpoint-phone) {
+
+	// your styles go here...
+}

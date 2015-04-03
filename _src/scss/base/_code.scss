@@ -2,15 +2,12 @@
 // Base – Code
 // ==========================================================================
 code, kbd, pre, samp {
-  word-wrap: break-word;
-  font-family: $default-code-font-family;
-  @include font-size(13);
+  padding: $spacing-xs $spacing-sm;
+  font-family: $font-family-monospace;
   line-height: normal;
   font-weight: normal;
-  border: 1px solid #eee;
-  background: #fff;
-  padding: 3px 8px;
-}
-code {
-  color: #111;
+  background: $gray-lighter;
+	color: $gray-dark;
+  border: 1px solid $gray-light;
+  word-wrap: break-word;
 }

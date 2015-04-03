@@ -2,7 +2,7 @@
 module.exports = function(grunt) {
 	require('load-grunt-tasks');
 
-	grunt.initConfig = {
+	grunt.initConfig({
 		pkg: require('package.json'),
 
 		banner:
@@ -14,9 +14,7 @@ module.exports = function(grunt) {
 		' */ ',
 		
 		// TODO: implement release task
-		release: {
-			
-		},
+		//release: {},
 
 		paths: {
 			assets: 'assets/',
@@ -30,6 +28,7 @@ module.exports = function(grunt) {
 				dist: '<%= paths.assets %>js/'
 			}
 		},
+		
 		concat: {
 			options: {
 				separator: ';',
@@ -102,7 +101,7 @@ module.exports = function(grunt) {
 				tasks: ['concat', 'uglify']
 			}
 		}
-	};
+	});
 	
 	grunt.registerTask(
 		'build',

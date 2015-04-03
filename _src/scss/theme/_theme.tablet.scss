@@ -2,4 +2,7 @@
 // Tablet Custom Styles
 // ==========================================================================
 
-// your styles go here...
+@include mquery($breakpoint-tablet) {
+
+	// your styles go here...
+}
