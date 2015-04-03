@@ -94,11 +94,6 @@ module.exports = function(grunt) {
 			js: {
 				files: ['<%= paths.js.src %>/*.js'],
 				tasks: ['concat', 'uglify']
-			},
-
-			html: {
-				files: ['<%= paths.html.src %>/*.html'],
-				tasks: ['handlebars']
 			}
 		}
 	};
