@@ -1,4 +1,5 @@
-scss/.sass-cache
+.sass-cache
 assets/lib
 node_modules
 _src/custom
+dist/
