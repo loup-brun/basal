@@ -1,6 +1,9 @@
 // ==========================================================================
-// Base – Custom Buttons
+// Base – Mixins - Buttons
 // ==========================================================================
+
+@import 'mixins/mixins.buttons';
+
 .btn {
 	@include inline-block;
 	@include border-radius(1px);
@@ -15,8 +18,8 @@
 .btn-default { @include btn-style($gray-lighter) }
 .btn-primary { @include btn-style($color-primary) }
 .btn-cta { @include btn-style($color-link) }
-//.btn-danger { @include btn-style($red) }
-//.btn-white { @include btn-style(#fff) }
+.btn-danger { @include btn-style($color-danger) }
+.btn-white { @include btn-style(#fff) }
 
 .btn[disabled],
 .btn.disabled {

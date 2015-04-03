@@ -3,12 +3,12 @@
 // ==========================================================================
 .section { position: relative; }
 
+// Containers
 .container {
+	@include horizontal-padding($spacing);
   max-width: $desktop-container;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 .container-full {
   max-width: $desktop-container;
@@ -16,33 +16,23 @@
   margin-right: auto;
 }
 
+// Rows
+.row {
+	@include clearfix;
+	@include vertical-padding($gutter);
+}
+
 // Columns
 .col {
+	@include horizontal-padding($gutter);
   float: left;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 [class*="pull-"], [class*="push-"] { position: relative; }
 
 .no-gutter {
-  padding-left: 0;
-  padding-right: 0;
+	@incliude horizontal-padding: 0;
 }
 
-@for $i from 1 through $columns {
-	.col-#{$i} { width: (100% * $i / $columns) - (2 * $gutter); }
-
-	@if $i != $columns {
-		.push-#{$i} { left: (100% * $i / $columns) - (2 * $gutter); }
-		.pull-#{$i} { left: (-100% * $i / $columns) - (2 * $gutter); }
-	}
-}
-
-// Rows
-.row {
-	@include clearfix;
-	@include vertical-padding($spacing);
-}
 
 .row-0 { @include vertical-padding(0); }
 .row-sm { @include vertical-padding($spacing-sm); }
