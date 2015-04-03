@@ -35,12 +35,12 @@ module.exports = function(grunt) {
 			css: {
 				src: '<%= paths.source %>scss/',
 				dist: '<%= paths.distribution %>css/',
-				asst: '<%= paths.assets %>js/'
+				asst: '<%= paths.assets %>css/'
 			},
 			js: {
 				src: '<%= paths.source %>js/',
 				dist: '<%= paths.distribution %>js/',
-				asst: '<%= paths.assets %>css/'
+				asst: '<%= paths.assets %>js/'
 			}
 		},
 
