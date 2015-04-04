@@ -14,12 +14,11 @@
 	padding: $spacing-xs $spacing-sm;
 }
 
-
-.btn-default { @include btn-style($gray-lighter) }
-.btn-primary { @include btn-style($color-primary) }
-.btn-cta { @include btn-style($color-link) }
-.btn-danger { @include btn-style($color-danger) }
-.btn-white { @include btn-style(#fff) }
+.btn--default { @include btn-style($gray-lighter) }
+.btn--primary { @include btn-style($color-primary) }
+.btn--cta { @include btn-style($color-link) }
+.btn--danger { @include btn-style($color-danger) }
+.btn--white { @include btn-style(#fff) }
 
 .btn[disabled],
 .btn.disabled {
