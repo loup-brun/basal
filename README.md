@@ -27,9 +27,9 @@ Basal provides these base styles:
 - tables
 - typography
 
-Basal is built on top of the [HTML5 Boilerplate](https://html5boilerplate.com/), with a few additions:
+Basal is built on top of the [HTML5 Boilerplate](https://html5boilerplate.com/), with the addition of [Head.js](http://headjs.com/). HeadJS provides many useful functions, such as adding proper styles to the page, browser fallbacks, async loading (scripts and stylesheets), document ready, and more.
 
-- [Head.js](http://headjs.com/) to add proper styles to the page and browser fallbacks. 
+The base script includes a clean head.js wrapper to ensure your functions are private and are run on DOM ready.
 
 ### Instalation
 
