@@ -1,6 +1,6 @@
-# Bloup
+# Basal
 
-Bloup was originally a fork of Matthew Hartman's great [Base](https://github.com/matthewhartman/base) framework, with opiniated practical tweaks (since the author's version didn't entirely correspond to my vision).
+Basal was originally a fork of Matthew Hartman's great [Base](https://github.com/matthewhartman/base) framework, with opiniated practical tweaks (since the author's version didn't entirely correspond to my vision).
 
 The main goal is to provide a drop-in unobtrusive modern framework to start designing a site right away. The project is built on SASS. 
 
@@ -9,11 +9,18 @@ The framework should work across all browsers: FF, Chrome, Opera, Safari and IE8
 
 In the past, I supported IE7 as much as I could - however, as of 2015, most developers have dropped support for that browser - so have I.
 
-Bloup is built on top of the [HTML5 Boilerplate](https://html5boilerplate.com/).
+### What's in the box?
+
+Basal
+
+Basal is built on top of the [HTML5 Boilerplate](https://html5boilerplate.com/), with a few additions:
+
+- [Head.js](http://headjs.com/) to add proper styles to the page and browser fallbacks
+- 
 
 ### Instalation
 
-Bloup is built with [Grunt](http://gruntjs.com/). If you have `npm` and `sass` installed, just run
+Basal is built with [Grunt](http://gruntjs.com/). If you have `npm` and `sass` installed, just run
 
 ```
 $ npm install        # installs the build tools (Grunt)

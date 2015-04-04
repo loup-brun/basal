@@ -1,31 +1,31 @@
 // ==========================================================================
 
-// Bloup Stylesheet
+// Basal Stylesheet
 // @author	Louis-Olivier Brassard
 // @version 0.1.0
 
 // ==========================================================================
 
 @import
-	"bloup/variables",
-	"bloup/mixins",
+	"basal/variables",
+	"basal/mixins",
 
-	"bloup/resets",
+	"basal/resets",
 	
 	// Important styles - required first
-	"bloup/helpers",
-	"bloup/type",
+	"basal/helpers",
+	"basal/type",
 	
-	// bloup styling
-	"bloup/blockquotes",
-	"bloup/buttons",
-	"bloup/code",
-	"bloup/forms",
-	"bloup/grid",
-	"bloup/lists",
-	"bloup/print",
-	"bloup/tables",
+	// basal styling
+	"basal/blockquotes",
+	"basal/buttons",
+	"basal/code",
+	"basal/forms",
+	"basal/grid",
+	"basal/lists",
+	"basal/print",
+	"basal/tables",
 	
-	"bloup/theme"
+	"basal/theme"
 
 	;
