@@ -2,9 +2,9 @@
 // Theme - Custom styles
 // ==========================================================================
 
+// Custom backgrounds
 .bg--primary { @include bg($color-primary); }
-
-.bg--danger { @include bg(lighten($color-danger, 25%), $color-danger); }
+//.bg--danger { @include bg(lighten($color-danger, 25%), $color-danger); }
 
 // your styles go here...
 	
