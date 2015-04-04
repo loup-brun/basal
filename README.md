@@ -1,13 +1,13 @@
 # Bloup
 
-Bloup is a fork of Matthew Hartman's great [Base](https://github.com/matthewhartman/base) framework, with opiniated practical tweaks (since the author's version didn't entirely correspond to my vision).
+Bloup was originally a fork of Matthew Hartman's great [Base](https://github.com/matthewhartman/base) framework, with opiniated practical tweaks (since the author's version didn't entirely correspond to my vision).
 
 The main goal is to provide a drop-in unobtrusive modern framework to start designing a site right away. The project is built on SASS. 
 
 ### Cross-Browser
 The framework should work across all browsers: FF, Chrome, Opera, Safari and IE8+.
 
-In the past, I supported IE7 as much as I could - however, as of 2015, the time has finally come to drop support for IE7.
+In the past, I supported IE7 as much as I could - however, as of 2015, most developers have dropped support for that browser - so have I.
 
 Bloup is built on top of the [HTML5 Boilerplate](https://html5boilerplate.com/).
 
