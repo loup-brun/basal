@@ -1,74 +1,27 @@
-# Welcome to Base
-[![Build Status](https://travis-ci.org/matthewhartman/base.svg?branch=v1)](https://travis-ci.org/matthewhartman/base)
+# Bloup
 
-A super simple, responsive framework built for all devices big, small and in-between
+Bloup is a fork of Matthew Hartman's great [Base](https://github.com/matthewhartman/base) framework, with opiniated practical tweaks (since the author's version didn't entirely correspond to my vision).
 
-## Reasons to use base for your next web project
-### Responsive Design
-Created to work on all devices big and small, Base has got you covered for your next exciting web project.
-
-### Awesome Foundation
-Built on Normalize.css, it includes all the foundation styles for typography, lists, tables, blockquotes, forms and more.
+The main goal is to provide a drop-in unobtrusive modern framework to start designing a site right away. The project is built on SASS. 
 
 ### Cross-Browser
-Perfected to work with older browsers (IE7+) and modern browsers such as Chrome, Safari, Firefox and Opera.
+The framework should work across all browsers: FF, Chrome, Opera, Safari and IE8+.
 
-### Base is Awesome!
-Preview the [docs](http://matthewhartman.github.io/base/docs/) to see the Base framework in all its glory! :)
+In the past, I supported IE7 as much as I could - however, as of 2015, the time has finally come to drop support for IE7.
 
-## Repo Contents
-- index.html: Basic HTML template which includes jQuery
-- style.css: Base stylesheet for typography, headings, tables, form elements, etc
-- readme.markdown - The Read Me file for Base (feel free to delete this)
-- .htaccess - Apache server caching, compression, and other configuration defaults for Grade-A performance (taken from [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
-- less (folder):
-  - style.less - The base stylesheet in LESS format
-    - base (folder):
-      - _blockquotes.less (Styles for blockquotes)
-      - _buttons.less (Base Buttons)
-      - _code.less (Styles for code blocks)
-      - _desktop-grid.less (Tablet grid and helpers)
-      - _forms.less (Styles for form elements)
-      - _global.less (Global typography and heading styles)
-      - _grid.less (Base Grid)
-      - _helpers.less (Base helpers)
-      - _lists.less (Styles for ordered, unordered lists and navigation)
-      - _mixins.less (Basic Mixins which include font-size properties and more)
-      - _print.less (Basic print stylesheet - taken from HTML5 Boilerplate)
-      - _resets.less (Global Resets)
-      - _tables.less (Styles for tables)
-      - _tablet-grid.less (Tablet grid and helpers)
-      - _variables.less (Base variables including default font sizes and colours)
-- scss (folder):
-  - style.scss - The base stylesheet in SCSS format
-  - base (folder):
-    - _blockquotes.scss (Styles for blockquotes)
-    - _buttons.scss (Base Buttons)
-    - _code.scss (Styles for code blocks)
-    - _desktop-grid.scss (Tablet grid and helpers)
-    - _forms.scss (Styles for form elements)
-    - _global.scss (Global typography and heading styles)
-    - _grid.scss (Base Grid)
-    - _helpers.scss (Base helpers)
-    - _lists.scss (Styles for ordered, unordered lists and navigation)
-    - _mixins.scss (Basic Mixins which include font-size properties and more)
-    - _print.scss (Basic print stylesheet - taken from HTML5 Boilerplate)
-    - _resets.scss (Global Resets)
-    - _tables.scss (Styles for tables)
-    - _tablet-grid.scss (Tablet grid and helpers)
-    - _variables.scss (Base variables including default font sizes and colours)
-- images (folder):
- - favicon.ico: Standard 32x32 favicon
- - apple-touch-icon (x3): All three sizes of Apple touch icons for iPhone 3, iPad and iPhone 4 with retina.
-- js (folder):
-  - default.js - Default javascript file (includes combined plugins and scripts)
-  - modernizr.js - Custom build of Modernizr to check for JS and SVG support
+Bloup is built on top of the [HTML5 Boilerplate](https://html5boilerplate.com/).
 
-Base was built by Matthew Hartman [(@matthewhartmans)](http://twitter.com/matthewhartmans), a passionate front end developer based in Melbourne, Australia.
+### Instalation
+
+Bloup is built with Grunt. If you have `npm` and `sass` installed, just run
+
+```
+$ npm install
+$ bower install
+$ grunt build
+```
 
 ## Thank You / Credits
-- [base_css-rails](https://github.com/rkrdo/base_css-rails) - a gem that adds the Base framework to the application's asset pipeline by Ricardo Cruz
-- Thanks to Beau Smith (@beau) for the custom breakpoint suggestion
 - Thanks to HTML5 framework for the .htaccess file
 - Nicolas Gallagher (@necolas) for Normalize.css and Micro ClearFix
 - Tristan McNab for adding bower support

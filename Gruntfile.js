@@ -7,11 +7,11 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 
 		banner:
-		'/**' +
-		' * @author <%= pkg.author %> \n' +
+		'/** \n' +
+		' * @authors <%= pkg.authors %> \n' +
 		' * @version <%= pkg.version %> \n' +
-		' * @description <% pkg.description %> \n' +
-		' * @license <% pkg.license %> \n' +
+		' * @description <%= pkg.description %> \n' +
+		' * @license <%= pkg.license %> \n' +
 		' */ ',
 
 		// TODO: implement release task
@@ -108,7 +108,7 @@ module.exports = function(grunt) {
 						expand: true,
 						flatten: true,
 						src: [
-							'<%= paths.css.dist %>*.css'
+							'<%= paths.css.dist %>*'
 						],
 						dest: '<%= paths.css.asst %>'
 					}
