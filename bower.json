@@ -1,10 +1,10 @@
 {
   "name": "bloup",
-  "version": "1.10.0",
-  "homepage": "http://matthewhartman.github.io/base/",
+  "version": "0.1.0",
+  "homepage": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/loup-brun/base.git"
+    "url": "https://github.com/loup-brun/bloup.git"
   },
   "authors": [
     "Matthew Hartman <hello@matthewhartman.com.au>",
