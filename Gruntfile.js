@@ -95,24 +95,25 @@ module.exports = function(grunt) {
 		},
 
 		copy: {
-			main: {
-				files: [
-					{
-						expand: true,
-						flatten: true,
-						src: [
-							'<%= paths.js.dist %>*.js'
-						],
-						dest: '<%= paths.js.asst %>'
-					},{
+			sass: {
+				files: [{
 						expand: true,
 						flatten: true,
 						src: [
 							'<%= paths.css.dist %>*'
 						],
 						dest: '<%= paths.css.asst %>'
-					}
-				]
+					}]
+			},
+			js: {
+				files: [{
+						expand: true,
+						flatten: true,
+						src: [
+							'<%= paths.js.dist %>*.js'
+						],
+						dest: '<%= paths.js.asst %>'
+					}]
 			}
 		},
 
@@ -120,12 +121,12 @@ module.exports = function(grunt) {
 		watch: {
 			sass: {
 				files: ['<%= paths.css.src %>**/*.scss'],
-				tasks: ['sass']
+				tasks: ['sass', 'copy:sass']
 			},
 
 			js: {
 				files: ['<%= paths.js.src %>/*.js'],
-				tasks: ['concat', 'uglify']
+				tasks: ['concat', 'uglify', 'copy:js']
 			}
 		}
 	};
