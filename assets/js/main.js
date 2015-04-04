@@ -1,6 +1,6 @@
 /** 
- * @authors Matthew Hartman <hello@matthewhartman.com.au>,Louis-Olivier Brassard <louis.oli.br@gmail.com> 
- * @version 0.1.0 
- * @description Base is a super simple, responsive framework, built to work on all devices big, small and in-between. 
+ * @authors Louis-Olivier Brassard <louis.oli.br@gmail.com> 
+ * @version 1.0.0 
+ * @description Basal is a lightweight, cross-browser css framework for web projects. 
  * @license MIT 
  */ 
