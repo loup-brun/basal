@@ -55,8 +55,13 @@ The directory structure is the following:
 
 ```
 |-- src/                     # source code to work on
-  |-- scss/                  # scss files
-    |-- basal/               # basal-specific files
+	|-- scss/                  # scss files
+		|-- basal/               # basal-specific files
+			|-- mixins/            # component-specific mixins
+			  _mixins.buttons.scss
+			  _mixins.grid.scss
+			  _mixins.theme.scss
+				
       _bloquotes.scss
       _buttons.scss
       _code.scss
@@ -77,7 +82,6 @@ The directory structure is the following:
     |-- theme/               # theme files (add your own)
       _theme.base.scss
       _theme.lg.scss
-      _theme.mixins.scss     # create some style mixins
       _theme.phone.scss
       _theme.tablet.scss
 ```
