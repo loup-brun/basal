@@ -1,7 +1,6 @@
-/* ==========================================================
-  Base Default JavaScript
-  -- Table of Contents --
-*/
+/*global window, document, ondomready*/
+(function(win, doc) {
+	ondomready(function() {
 
-
-// JS functions and initiations go here...
+	});
+})(window, document);
