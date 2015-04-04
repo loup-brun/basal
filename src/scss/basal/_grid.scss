@@ -4,14 +4,11 @@
 
 @import 'mixins/mixins.grid';
 
-.section { position: relative; }
-
 // Containers
 .container {
 	@include horizontal-padding($spacing);
+	@include horizontal-margin(auto);
 	max-width: $width-container;
-	margin-left: auto;
-	margin-right: auto;
 }
 .container-full {
 	@incluide horizontal-margin(auto);

@@ -8,7 +8,7 @@ ul ul,
 ol ol,
 ul ol,
 ol ul {
-  margin: 0;
+	margin: 0;
 }
 
 dt { font-style: normal }
@@ -18,8 +18,8 @@ dd {
 
 menu, ol, ul { padding: 0 0 0 22px; }
 nav ul, nav ol {
-  list-style: none;
-  list-style-image: none;
+	list-style: none;
+	list-style-image: none;
 }
 
 menu, ol, ul { padding: 0 0 0 $spacing; }
@@ -42,21 +42,24 @@ menu, ol, ul { padding: 0 0 0 $spacing; }
 }
 
 .nav {
+	@include clearfix;
+	
 	> ul {
 		@include list-reset;
-		
+
 		> li {
 			float: left;
-			
+
 			> a {
 				display: block;
 				padding: $spacing-sm;
 				cursor: pointer;
+				color: inherit;
 			}
 		}
 	}
 }
 
 .navbar {
-	
+
 }
