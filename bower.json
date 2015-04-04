@@ -1,16 +1,15 @@
 {
-  "name": "bloup",
+  "name": "basal",
   "version": "0.1.0",
   "homepage": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/loup-brun/bloup.git"
+    "url": "https://github.com/loup-brun/basal.git"
   },
   "authors": [
-    "Matthew Hartman <hello@matthewhartman.com.au>",
     "Louis-Olivier Brassard <louis.oli.br@gmail.com>"
   ],
-  "description": "Base is a super simple, responsive framework, built to work on all devices big, small and in-between.",
+  "description": "Basal is a lightweight, cross-browser css framework for web projects.",
   "keywords": [
     "css",
     "sass",
