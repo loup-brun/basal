@@ -4,7 +4,7 @@ Basal was originally a fork of Matthew Hartman's great [Base](https://github.com
 
 The main goal is to provide a drop-in unobtrusive modern framework to start designing a site right away. The project is built on SASS. 
 
-### Cross-Browser
+### Cross-browser
 
 The framework should work across all browsers: FF, Chrome, Opera, Safari and IE8+.
 
@@ -86,7 +86,7 @@ The directory structure is the following:
       _theme.tablet.scss
 ```
 
-Feel free to change whatever you want once you've installed the framework - make it your own for your project. Add a stylesheet for each new component in `basal/` (e.g. `main`, `sidebar`, etc...). The theme directory is merely for non-modular styles, e.g. a hero layout that you'll only find on the home page, small css widgets that require special styling and that you don't know where to put elsewhere. It's an 'ordered' mess!
+Feel free to change whatever you want once you've installed the framework - make it your own for your project. Add a stylesheet for each new component in `basal/` (e.g. `main`, `sidebar`, etc...). The theme directory is merely for non-modular styles, e.g. a hero layout that you'll only find on the home page, small css widgets that require special styling and that you don't know where to put elsewhere. It's an _ordered_ mess!
 
 ## Thank You / Credits
 - Nicolas Gallagher (@necolas) for Normalize.css and Micro ClearFix
