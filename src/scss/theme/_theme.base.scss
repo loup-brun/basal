@@ -3,8 +3,11 @@
 // ==========================================================================
 
 // Custom backgrounds
-.bg--primary { @include bg($color-primary); }
+//.bg--primary { @include bg($color-primary); }
 //.bg--danger { @include bg(lighten($color-danger, 25%), $color-danger); }
+//.bg--darker { @include bg($gray-darker); }
+//.bg--gray { @include bg($gray, $gray-darker); }
+//.bg--light { @include bg($gray-lighter, $gray-dark); }
 
 // your styles go here...
 	
