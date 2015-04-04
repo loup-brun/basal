@@ -1,9 +1,0 @@
-// ==========================================================================
-// Theme - Mixins
-// ==========================================================================
-
-@mixin drop-shadow {
-	@include box-shadow(0 1px 3px rgba(0,0,0,.4));
-	//border: 1px solid $gray-light; // old browsers fallback
-	//border: 0 solid rgba(0,0,0,.1);
-}
