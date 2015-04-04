@@ -31,6 +31,8 @@ along with header, footer, navigation and theme-ready stylesheets.
 
 Basal is built on top of the [HTML5 Boilerplate](https://html5boilerplate.com/), with the addition of [Head.js](http://headjs.com/). HeadJS provides many useful functions, such as adding proper styles to the page, browser fallbacks, async loading (scripts and stylesheets), document ready, and more.
 
+The project also includes a useful class utility, [classie](https://github.com/desandro/classie)
+
 The base script includes a clean head.js wrapper to ensure your functions are private and are run on DOM ready.
 
 ### Installation

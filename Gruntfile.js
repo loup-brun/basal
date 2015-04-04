@@ -14,7 +14,23 @@ module.exports = function(grunt) {
 		' * @license <%= pkg.license %> \n' +
 		' */ ',
 
-		// TODO: implement release task
+		paths: {
+			assets: 'assets/',
+			source: 'src/',
+			distribution: 'dist/',
+			lib: '<%= paths.assets %>lib/',
+			css: {
+				src: '<%= paths.source %>scss/',
+				dist: '<%= paths.distribution %>css/',
+				asst: '<%= paths.assets %>css/'
+			},
+			js: {
+				src: '<%= paths.source %>js/',
+				dist: '<%= paths.distribution %>js/',
+				asst: '<%= paths.assets %>js/'
+			}
+		},
+
 		version: {
 			project: {
 				src: ['package.json', 'bower.json']
@@ -25,22 +41,6 @@ module.exports = function(grunt) {
 					prefix: '@version\\s*'
 				},
 				src: ['<%= paths.css.src %>*.scss']
-			}
-		},
-
-		paths: {
-			assets: 'assets/',
-			source: 'src/',
-			distribution: 'dist/',
-			css: {
-				src: '<%= paths.source %>scss/',
-				dist: '<%= paths.distribution %>css/',
-				asst: '<%= paths.assets %>css/'
-			},
-			js: {
-				src: '<%= paths.source %>js/',
-				dist: '<%= paths.distribution %>js/',
-				asst: '<%= paths.assets %>js/'
 			}
 		},
 
