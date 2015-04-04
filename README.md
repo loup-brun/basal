@@ -5,13 +5,23 @@ Basal was originally a fork of Matthew Hartman's great [Base](https://github.com
 The main goal is to provide a drop-in unobtrusive modern framework to start designing a site right away. The project is built on SASS. 
 
 ### Cross-Browser
+
 The framework should work across all browsers: FF, Chrome, Opera, Safari and IE8+.
 
 In the past, I supported IE7 as much as I could - however, as of 2015, most developers have dropped support for that browser - so have I.
 
 ### What's in the box?
 
-Basal
+Basal is primarily a CSS framework. It provides the base styles for responsive web projects and allows for easy extension and customization - scalability and modularity first.
+
+Basal provides these base styles:
+
+- bloquotes
+- buttons
+- code
+- forms
+- grid
+- nav
 
 Basal is built on top of the [HTML5 Boilerplate](https://html5boilerplate.com/), with a few additions:
 
