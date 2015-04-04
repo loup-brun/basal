@@ -1,0 +1,41 @@
+// ==========================================================================
+// Basal – Tables
+// ==========================================================================
+
+table {
+  width: 100%;
+  margin: $spacing 0;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-right: 1px solid $gray-lighter;
+  border-bottom: 1px solid $gray-lighter;
+  word-wrap: break-word; // CSS3 Browsers
+  -ms-word-wrap: break-word; // IE8
+}
+
+table th,
+table td {
+  padding: $spacing-xs;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid $gray-light;
+  border-left: 1px solid $gray-light;
+}
+
+table thead th,
+table tfoot th {
+  vertical-align: bottom;
+	font-style: normal;
+  background-color: $gray-lighter;
+  color: $gray-darker;
+}
+
+table caption {
+  padding: $spacing-xs;
+  font-weight: normal;
+  font-style: normal;
+	font-style: normal;
+	text-align: left;
+  border-bottom: 0;
+}

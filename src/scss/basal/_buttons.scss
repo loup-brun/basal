@@ -1,0 +1,28 @@
+// ==========================================================================
+// Basal – Mixins - Buttons
+// ==========================================================================
+
+@import 'mixins/mixins.buttons';
+
+.btn {
+	@include inline-block;
+	@include border-radius(1px);
+	font-size: $font-size;
+	border: 0;
+	cursor: pointer;
+	margin: 3px;
+	padding: $spacing-xs $spacing-sm;
+}
+
+
+.btn-default { @include btn-style($gray-lighter) }
+.btn-primary { @include btn-style($color-primary) }
+.btn-cta { @include btn-style($color-link) }
+.btn-danger { @include btn-style($color-danger) }
+.btn-white { @include btn-style(#fff) }
+
+.btn[disabled],
+.btn.disabled {
+	color: $gray;
+	background-color: $gray-lighter;
+}
