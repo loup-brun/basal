@@ -143,6 +143,15 @@ module.exports = function(grunt) {
 			'copy'
 		]
 	);
+	
+	grunt.registerTask(
+		'dev',
+		'Build the files and watch for changes',
+		[
+			'build',
+			'watch'
+		]
+	);
 
 	grunt.registerTask(
 		'default',

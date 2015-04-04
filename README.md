@@ -13,12 +13,18 @@ Bloup is built on top of the [HTML5 Boilerplate](https://html5boilerplate.com/).
 
 ### Instalation
 
-Bloup is built with Grunt. If you have `npm` and `sass` installed, just run
+Bloup is built with [Grunt](http://gruntjs.com/). If you have `npm` and `sass` installed, just run
 
 ```
-$ npm install
-$ bower install
-$ grunt build
+$ npm install        # installs the build tools (Grunt)
+$ bower install      # installs the libraries
+$ grunt build        # builds the css and js files
+```
+
+To rebuild the files as you make changes, run
+
+```
+$ grunt dev
 ```
 
 ## Thank You / Credits
