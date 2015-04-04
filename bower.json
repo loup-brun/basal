@@ -15,7 +15,7 @@
     "css",
     "sass",
     "scss",
-		"cross-browser",
+    "cross-browser",
     "framework",
     "lightweight",
     "responsive"
@@ -31,6 +31,6 @@
   "devDependencies": {},
   "dependencies": {
     "headjs": "~1.0.3",
-    "ondomready": "~1.4.0"
+    "classie": "~1.0.1"
   }
 }

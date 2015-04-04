@@ -52,7 +52,7 @@ module.exports = function(grunt) {
 			main: {
 				// concatenate libraries with general.js > main.js
 				src: [
-					'<%= paths.lib %>ondomready/ondomready.js',
+					'<%= paths.lib %>classie/classie.js',
 
 					'<%= paths.js.src %>/custom.js'
 				],

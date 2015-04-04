@@ -20,13 +20,16 @@ Basal provides these base styles:
 - buttons
 - code
 - forms
-- grid
+- grid (normal, tablet, phone)
+- helpers
 - nav
+- print
+- tables
+- typography
 
 Basal is built on top of the [HTML5 Boilerplate](https://html5boilerplate.com/), with a few additions:
 
-- [Head.js](http://headjs.com/) to add proper styles to the page and browser fallbacks
-- 
+- [Head.js](http://headjs.com/) to add proper styles to the page and browser fallbacks. 
 
 ### Instalation
 
