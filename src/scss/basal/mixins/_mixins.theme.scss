@@ -1,0 +1,18 @@
+// ==========================================================================
+// Theme - Mixins
+// ==========================================================================
+
+@mixin bg($bg-color, $color:false) {
+	
+	// If a custom color isn't specified, check it against the background
+	@if ($color == false) {
+		$color: check-background($bg-color);
+	}
+	
+	background-color: $bg-color;
+	color: $color;
+}
+
+@mixin drop-shadow {
+	@include box-shadow(0 1px 3px rgba(0,0,0,.4));
+}
