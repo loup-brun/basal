@@ -40,3 +40,23 @@ menu, ol, ul { padding: 0 0 0 $spacing; }
 		@include inline-block;
 	}
 }
+
+.nav {
+	> ul {
+		@include list-reset;
+		
+		> li {
+			float: left;
+			
+			> a {
+				display: block;
+				padding: $spacing-sm;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.navbar {
+	
+}
