@@ -40,7 +40,7 @@
 // -------------------------------------------
 
 @include grid;
-.no-push, .no-pull { left: auto; }
+.no-push, .no-pull { margin-left: auto; }
 
 // END Shared grid styles
 // -------------------------------------------
@@ -48,10 +48,10 @@
 @include mquery($breakpoint-tablet) {
 
 	@include grid(tablet);
-	.tablet-no-push, .tablet-no-pull { left: auto; }
+	.tablet-no-push, .tablet-no-pull { margin-left: auto; }
 }
 
 @include mquery($breakpoint-phone) {
 	@include grid(phone);
-	.phone-no-push, .phone-no-pull { left: auto; }
+	.phone-no-push, .phone-no-pull { margin-left: auto; }
 }

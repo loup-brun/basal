@@ -7,11 +7,11 @@
 .btn {
 	@include inline-block;
 	@include border-radius(1px);
+	margin: 3px;
 	padding: $spacing-xs $spacing-sm;
 	font-size: $font-size;
 	border: 0;
 	cursor: pointer;
-	margin: 3px;
 }
 
 .btn--default { @include btn-style($gray-lighter) }
