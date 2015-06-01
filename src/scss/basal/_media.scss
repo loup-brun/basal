@@ -15,8 +15,8 @@ audio,
 canvas,
 progress,
 video {
-@include inline-block;
-vertical-align: baseline;
+  @include inline-block;
+  vertical-align: baseline;
 }
 
 audio:not([controls]) {

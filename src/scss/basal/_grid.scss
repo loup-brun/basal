@@ -6,19 +6,19 @@
 
 // Containers
 .container {
-	@include horizontal-padding($spacing);
-	@include horizontal-margin(auto);
-	max-width: $width-container;
+  @include horizontal-padding($spacing);
+  @include horizontal-margin(auto);
+  max-width: $width-container;
 }
 .container-full {
-	@incluide horizontal-margin(auto);
-	max-width: none;
+  @incluide horizontal-margin(auto);
+  max-width: none;
 }
 
 // Rows
 .row {
-	@include clearfix;
-	position: relative;
+  @include clearfix;
+  position: relative;
 }
 
 .row-sm { @include vertical-padding($spacing-sm); }
@@ -26,14 +26,14 @@
 
 // Columns
 .col {
-	@include horizontal-padding($gutter);
-	float: left;
-	position: relative;
+  @include horizontal-padding($gutter);
+  float: left;
+  position: relative;
 }
 
 
 .no-gutter {
-	@include horizontal-padding(0);
+  @include horizontal-padding(0);
 }
 
 // Shared grid styles
@@ -47,11 +47,11 @@
 
 @include mquery($breakpoint-tablet) {
 
-	@include grid(tablet);
-	.tablet-no-push, .tablet-no-pull { margin-left: auto; }
+  @include grid(tablet);
+  .tablet-no-push, .tablet-no-pull { margin-left: auto; }
 }
 
 @include mquery($breakpoint-phone) {
-	@include grid(phone);
-	.phone-no-push, .phone-no-pull { margin-left: auto; }
+  @include grid(phone);
+  .phone-no-push, .phone-no-pull { margin-left: auto; }
 }
