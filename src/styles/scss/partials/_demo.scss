@@ -8,33 +8,3 @@
   border-radius: $border-radius;
   background-color: $color-primary;
 }
-
-.tag {
-  display: inline-block;
-  padding: $spacing-xs;
-  border-radius: $border-radius;
-}
-
-@include mquery(map-get($breakpoints, sm)) {
-  // styles on small devices
-
-  .grid-block {
-  @include bg(lighten($color-primary, 5%));
-  }
-}
-
-@include mquery(map-get($breakpoints, md)) {
-  // styles on medium devices
-
-  .grid-block {
-  @include bg(lighten($color-primary, 15%));
-  }
-}
-
-@include mquery(map-get($breakpoints, lg)) {
-  // styles on medium devices
-
-  .grid-block {
-  @include bg(lighten($color-primary, 20%));
-  }
-}
