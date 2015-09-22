@@ -462,7 +462,7 @@ textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
   font-style: normal;
-  line-height: normal;
+  line-height: 1.6;
   background-color: #fff;
   border: 1px solid #ccc;
   color: #111;
@@ -1114,11 +1114,4 @@ pre code {
 .pagefooter {
   padding: 1.5em;
   background-color: #eee;
-}
-
-.grid-block {
-  padding: 1em 0;
-  margin-top: 1em;
-  border-radius: 3px;
-  background-color: #65BF4C;
 }
