@@ -67,7 +67,7 @@ input[type=radio] {
   }
 }
 
-button, input { line-height: normal; }
+button, input { line-height: $line-height; }
 button, select { text-transform: none; }
 
 textarea {
