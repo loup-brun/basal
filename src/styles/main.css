@@ -1116,3 +1116,37 @@ pre code {
   padding: 1.5em;
   background-color: #eee;
 }
+
+.grid-block {
+  padding: 1em 0;
+  margin-top: 1em;
+  border-radius: 3px;
+  background-color: #65BF4C;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.4em;
+  border-radius: 3px;
+}
+
+@media screen and (min-width: 768px) {
+  .grid-block {
+    background-color: #75c65f;
+    color: #fff;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .grid-block {
+    background-color: #95d384;
+    color: #111;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .grid-block {
+    background-color: #a6da97;
+    color: #111;
+  }
+}
