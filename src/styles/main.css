@@ -198,19 +198,19 @@ i, em, .em, dfn, blockquote footer cite, q {
 }
 
 a {
-  text-decoration: underline;
+  text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:focus {
   outline: none;
 }
 
-a:active, a a:hover {
+a:active, a:hover {
   outline: none;
 }
 
