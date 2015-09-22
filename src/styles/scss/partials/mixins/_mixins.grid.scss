@@ -1,0 +1,22 @@
+// ==========================================================================
+// Mixins/Grid
+// ==========================================================================
+
+@mixin grid($namespace:false) {
+
+  $prefix: '';
+
+  // Add hyphen to prefix, otherwise just output an empty string 
+  @if ($namespace != false) {
+    $prefix: '#{$namespace}-';
+  }
+
+  @for $i from 1 through $columns {
+    .col-#{$prefix}#{$i} { width: 100% * $i / $columns; }
+
+    // Don't create a push/pull for the last column
+    @if $i != $columns {
+      .push-#{$prefix}#{$i} { margin-left: 100% * $i / $columns; }
+    }
+  }
+}

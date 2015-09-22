@@ -1,0 +1,71 @@
+// ==========================================================================
+// CSS Helpers / Extras
+// ==========================================================================
+
+.clearfix { @include clearfix; }
+
+// Display
+.block { display: block; }
+.inline { display: inline; }
+.inline-block { display: inline-block; }
+
+.hide { display: none; }
+.show { display: block; }
+
+// Floats
+.left { float: left; }
+.right { float: right; }
+
+
+.no-margin { margin: 0; }
+.no-padding { padding: 0; }
+.no-float { float: none; }
+.no-bg { background: transparent; }
+.no-border { border: 0; }
+
+// Font Weights
+.font-ultra-bold { font-weight: 900; }
+.font-bold { font-weight: 700; }
+.font-light { font-weight: 300; }
+.font-thin { font-weight: 100; }
+
+// Font Styles
+.font-normal { font-style: normal; }
+.capitalize { text-transform: capitalize; }
+.uppercase { text-transform: uppercase; }
+
+// Text Position
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+
+// Accessibility (offscreen text for screen readers)
+.visuallyhidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.75;
+}
+
+
+// Helper classes for responsive usage
+@each $namespace, $breakpoint in $breakpoints {
+  @if $breakpoint != false {
+    @include mquery($breakpoint) {
+      .hide-#{$namespace} { display: none; }
+      .show-#{$namespace} { display: block; }
+      .text-left-#{$namespace} { text-align: left; }
+      .text-right-#{$namespace} { text-align: right; }
+      .text-center-#{$namespace} { text-align: center; }
+    }
+  }
+}

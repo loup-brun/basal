@@ -1,8 +1,16 @@
-# Basal
+Basal
+===
 
-Basal was originally a fork of Matthew Hartman's great [Base](https://github.com/matthewhartman/base) framework, with opiniated practical tweaks (since the author's version didn't entirely correspond to my vision).
+Basal is a lightweight, cross-browser framework for web projects. The main goal is to provide a drop-in unobtrusive modern framework to start designing a site right away, with the use of a powerful [CSS preprocessor](http://sass-lang.com).
 
-The main goal is to provide a drop-in unobtrusive modern framework to start designing a site right away. The project is built on [SASS](http://sass-lang.com). 
+Basal was originally a fork of Matthew Hartman's great [Base](https://github.com/matthewhartman/base) framework, with opiniated practical tweaks.
+
+## Philosophy & Core Concepts
+
+* cross-browser, graceful degradation implementation
+* modularity & scalability
+* verbose markup
+* mobile-first
 
 ### Cross-browser
 
@@ -10,15 +18,15 @@ The framework should work across all browsers: FF, Chrome, Opera, Safari and IE8
 
 ### What's in the box?
 
-Basal is primarily a CSS framework. It provides the base styles for responsive web projects and allows for easy extension and customization - scalability and modularity first.
+Basal is a CSS framework. It provides the base styles for responsive web projects and allows for easy extension and customization - scalability and modularity first.
 
-Basal provides these base styles:
+Basal provides the following core styles:
 
 - bloquotes
 - buttons
 - code
 - forms
-- grid (normal, tablet, phone)
+- grid (with responsive breakpoints)
 - helpers
 - nav
 - print
@@ -33,7 +41,7 @@ Basal is built with [Grunt](http://gruntjs.com/). If you have `npm` and `sass` i
 
 ```
 npm install        # installs the build tools (Grunt)
-grunt build        # builds the css and js files
+grunt              # runs the build task (prefix + minify the css)
 ```
 
 To rebuild the files as you make changes, run
@@ -47,42 +55,35 @@ grunt dev
 The directory structure is the following:
 
 ```
-|-- src/                     # source code to work on
-  |-- scss/                  # scss files
-    |-- basal/               # basal-specific files
-       |-- mixins/           # component-specific mixins
-        _mixins.buttons.scss
-        _mixins.grid.scss
-        _mixins.theme.scss
-
-      _bloquotes.scss
-      _buttons.scss
-      _code.scss
-      _footer.scss
-      _grid.scss
-      _header.scss
-      _helpers.scss
-      _media.scss
-      _mixins.scss
-      _nav.scss
-      _print.scss
-      _resets.scss
-      _tables.scss
-      _theme.scss            # compiles stylesheets found in theme/
-      _type.scss
-      _variables.scss
-  
-    |-- theme/               # theme files (add your own)
-      _theme.base.scss
-      _theme.lg.scss
-      _theme.phone.scss
-      _theme.tablet.scss
+|-- src/                       # source code to work on
+  index.html
+  |-- scripts/
+  |-- styles/
+    main.css                   # compiled css files
+    |-- scss/                  # source scss files
+      |-- partials/
+        |-- mixins/            # component-specific mixins
+        |-- skins/             # custom skins, color palettes
+        _bloquotes.scss
+        _buttons.scss
+        _code.scss
+        _footer.scss
+        _grid.scss
+        _header.scss
+        _helpers.scss
+        _lists.scss
+        _media.scss
+        _mixins.scss
+        _print.scss
+        _resets.scss
+        _tables.scss
+        _theme.scss
+        _type.scss
+        _variables.scss
 ```
 
-Feel free to change whatever you want once you've installed the framework - make it your own for your project. Add a stylesheet for each new component in `basal/` (e.g. `main`, `sidebar`, etc...). The theme directory is merely for non-modular styles, e.g. a hero layout that you'll only find on the home page, small css widgets that require special styling and that you don't know where to put elsewhere. It's an _ordered_ mess!
-
-## Thank You / Credits
-- Nicolas Gallagher (@necolas) for Normalize.css and Micro ClearFix
+## Credits
+- Nicolas Gallagher (@necolas) for Normalize.css and the Micro ClearFix
 - Thanks to HTML5 framework for the .htaccess file
 
 ## MIT Open Source License

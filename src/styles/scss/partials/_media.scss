@@ -1,0 +1,29 @@
+// ==========================================================================
+//  Media
+// ==========================================================================
+
+// Images
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+svg:not(:root) { overflow: hidden; }
+figure { margin: 0; }
+
+// Audio
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  @extend .none;
+  height: 0;
+}

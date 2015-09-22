@@ -20,9 +20,10 @@ module.exports = function(grunt) {
       js: {
         files: [
           {
-            '<%= paths.dist %>/scripts/*.js': [
-              '<%= paths.dist %>/scripts/*.js'
-            ]
+            expand: true,
+            cwd: '<%= paths.dist %>/scripts',
+            src: ['*.js'],
+            dest: '<%= paths.dist %>/scripts/'
           }
         ]
       }
@@ -54,10 +55,24 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: './',
-          src: ['<%= paths.src %>/styles/*.css'],
+          flatten: true,
+          cwd: '<%= paths.src %>/styles',
+          src: ['*.css'],
           dest: '<%= paths.dist %>/styles',
           ext: '.css'
+        }]
+      }
+    },
+    htmlmin: {
+      dist: {
+        options: {
+          collapseWhitespace: true
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= paths.dist %>',
+          src: ['{,*/}*.html'],
+          dest: '<%= paths.dist %>'
         }]
       }
     },
@@ -100,7 +115,8 @@ module.exports = function(grunt) {
       'postcss',
       'cssmin',
       'copy:dist',
-      'uglify'
+      'uglify',
+      'htmlmin'
     ]
   );
   grunt.registerTask(

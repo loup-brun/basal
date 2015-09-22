@@ -1,0 +1,113 @@
+// ==========================================================================
+// Basal – Global Typography
+// ==========================================================================
+
+body {
+  font-family: $font-family-body;
+  font-size: $font-size;
+  line-height: $line-height;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Font Style
+b, strong, .strong { @extend .font-bold; }
+i, em, .em { font-style: italic; }
+
+// Links
+a {
+  text-decoration: none;
+  // Remove the gray background color from active links in IE 10.
+  background-color: transparent;
+
+  &:hover { text-decoration: none; }
+  &:focus { outline: none; }
+  &:active, a:hover { outline: none; }
+}
+
+// Paragraph and Small
+p {
+  margin: 0 0 $spacing-lg 0;
+}
+
+pre { margin: $spacing-sm 0; }
+
+// Abbreviations
+abbr[title], .abbr[title] {
+  border-bottom: $border-width dotted;
+  cursor: help;
+}
+
+// Mark
+mark, .mark {
+  background: #ff0;
+  color: #111;
+}
+
+del, .del {
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+// Horizontal Rule
+hr {
+  border: 0;
+  background: none;
+  outline: 0;
+  margin: 2em 0;
+  box-sizing: content-box;
+  height: $border-width;
+}
+
+// Small, Sub and Sup
+small, .small { font-size: $font-size-sm; }
+
+sub, sup {
+  font-size: $font-size-sm;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+// Definition
+dfn { @extend .em; }
+
+// Headings
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+{
+  margin: $spacing 0 $spacing-xs;
+  line-height: normal;
+  font-weight: normal;
+  font-family: $font-family-heading;
+}
+
+h1, .h1 {
+  font-size: $font-size-h1;
+}
+h2, .h2 { 
+  font-size: $font-size-h2;
+}
+h3, .h3 { 
+  font-size: $font-size-h3;
+}
+h4, .h4 { 
+  font-size: $font-size-h4;
+}
+h5, .h5 { 
+  font-size: $font-size-h5;
+}
+h6, .h6 { 
+  font-size: $font-size-h6;
+}
+
+// Remove Heading Styling
+.unstyled-heading {
+  margin: 0;
+  font-size: $font-size;
+}

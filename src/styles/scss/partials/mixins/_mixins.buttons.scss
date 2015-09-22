@@ -1,0 +1,16 @@
+// ==========================================================================
+// Mixins/Buttons
+// ==========================================================================
+
+@mixin btn-style($color) {
+  background-color: $color;
+  color: check-bg($color);
+
+  &:focus, &:hover {
+    background-color: lighten($color, 4%);
+  }
+
+  &:active {
+    //background-color: darken($color, 5%);
+  }
+}

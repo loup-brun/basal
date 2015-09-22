@@ -1,0 +1,91 @@
+// ==========================================================================
+// Basal – Global Variables
+// ==========================================================================
+
+$baseUrl:                           ''; // when building the site with a prefixed url (e.g. /blog/)
+
+// Layout
+// ==========================================================================
+
+// Standard spacings
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+$spacing:                           1em;
+$spacing-xs:                        $spacing * 0.4;
+$spacing-sm:                        $spacing * 0.75;
+$spacing-lg:                        $spacing * 1.5;
+$spacing-xl:                        $spacing * 2.5;
+
+$width-container:                   760px;
+$width-container-lg:                850px;
+
+// Responsive breakpoints
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+$breakpoints: (
+  xs: false,
+  sm: 768px,
+  md: 990px,
+  lg: 1250px
+);
+
+// Grid
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+$columns:                           12;
+$gutter:                            $spacing-sm;
+
+// Z-index
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+$z-index-component:                 10;
+$z-index-tooltip:                   20;
+$z-index-overlay:                   30;
+
+// Colors
+// ==========================================================================
+
+// Import a color palette with sass variables, as in the example below.
+// Note that the five styles of gray are mandatory, as well as three
+// branding colors ($color-primary, $color-secondary, $color-tertirary).
+//
+// $gray-lighter:                      #eee;
+// $gray-light:                        #ccc;
+// $gray:                              #999;
+// $gray-dark:                         #666;
+// $gray-darker:                       #111;
+// 
+// $my-color1:                         #bada55;
+// $my-color2:                         #c55c55;
+// $my-color3:                         #facade;
+// 
+// $color-primary:                     $my-color1;
+// $color-secondary:                   $my-color2;
+// $color-tertiary:                    $my-color3;
+
+@import 'skins/skin.default';
+
+// Type
+// ==========================================================================
+$font-size:                         14px;
+$font-size-sm:                      $font-size * 0.8;
+$font-size-lg:                      $font-size * 1.4;
+$line-height:                       1.6;
+
+$font-family-serif:                 serif;
+$font-family-sans-serif:            sans-serif;
+$font-family-monospace:             monospace;
+
+$font-family-heading:               $font-family-sans-serif;
+$font-family-body:                  $font-family-sans-serif;
+
+// Headings
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+$font-size-h1: 						2.5em;
+$font-size-h2: 						1.8em;
+$font-size-h3: 						1.5em;
+$font-size-h4: 						1.33em;
+$font-size-h5: 						1.15em;
+$font-size-h6: 						1em;
+
+// Objects & Dimensions
+// ==========================================================================
+$border-radius:                     3px;
+$border-width:                      1px;
+$border-width-thick:                8px;

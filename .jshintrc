@@ -1,0 +1,11 @@
+{
+  "globals": {
+    "window": true,
+    "document": true,
+    "require": true,
+    "define": true
+  },
+  "curly": true,
+  "undef": true,
+  "loopfunc": true
+}
