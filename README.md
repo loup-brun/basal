@@ -2,13 +2,11 @@
 
 Basal was originally a fork of Matthew Hartman's great [Base](https://github.com/matthewhartman/base) framework, with opiniated practical tweaks (since the author's version didn't entirely correspond to my vision).
 
-The main goal is to provide a drop-in unobtrusive modern framework to start designing a site right away. The project is built on SASS. 
+The main goal is to provide a drop-in unobtrusive modern framework to start designing a site right away. The project is built on [SASS](http://sass-lang.com). 
 
 ### Cross-browser
 
-The framework should work across all browsers: FF, Chrome, Opera, Safari and IE8+.
-
-In the past, I supported IE7 as much as I could - however, as of 2015, most developers have dropped support for that browser - so have I.
+The framework should work across all browsers: FF, Chrome, Opera, Safari and IE8+. IE support is dropping quickly within the www community - Basal may eventually follow this trend.
 
 ### What's in the box?
 
@@ -27,28 +25,21 @@ Basal provides these base styles:
 - tables
 - typography
 
-along with header, footer, navigation and theme-ready stylesheets.
-
-Basal is built on top of the [HTML5 Boilerplate](https://html5boilerplate.com/), with the addition of [Head.js](http://headjs.com/). HeadJS provides many useful functions, such as adding proper styles to the page, browser fallbacks, async loading (scripts and stylesheets), document ready, and more.
-
-The project also includes a useful class utility, [classie](https://github.com/desandro/classie)
-
-The base script includes a clean head.js wrapper to ensure your functions are private and are run on DOM ready.
+along with header, footer and navigation stylesheets.
 
 ### Installation
 
 Basal is built with [Grunt](http://gruntjs.com/). If you have `npm` and `sass` installed, just run
 
 ```
-$ npm install        # installs the build tools (Grunt)
-$ bower install      # installs the libraries
-$ grunt build        # builds the css and js files
+npm install        # installs the build tools (Grunt)
+grunt build        # builds the css and js files
 ```
 
 To rebuild the files as you make changes, run
 
 ```
-$ grunt dev
+grunt dev
 ```
 
 ### Building, directory structure

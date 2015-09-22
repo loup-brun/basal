@@ -1,163 +1,121 @@
 module.exports = function(grunt) {
 
-	require('load-grunt-tasks')(grunt);
+  require('load-grunt-tasks')(grunt);
 
-	// Grunt big config object with tasks options
-	var config = {
-		pkg: grunt.file.readJSON('package.json'),
+  // Grunt big config object with tasks options
+  var config = {
+    pkg: grunt.file.readJSON('package.json'),
+    banner:
+    '/** \n' +
+    ' * @authors <%= pkg.authors %> \n' +
+    ' * @version <%= pkg.version %> \n' +
+    ' * @description <%= pkg.description %> \n' +
+    ' * @license <%= pkg.license %> \n' +
+    ' */ ',
+    paths: {
+      src: 'src',
+      dist: 'dist'
+    },
+    uglify: {
+      js: {
+        files: [
+          {
+            '<%= paths.dist %>/scripts/*.js': [
+              '<%= paths.dist %>/scripts/*.js'
+            ]
+          }
+        ]
+      }
+    },
+    sass: {
+      main: {
+        files: [{
+          expand: true,
+          cwd: '<%= paths.src %>/styles/scss',
+          src: ['*.scss'],
+          dest: '<%= paths.src %>/styles',
+          ext: '.css'
+        }]
+      },
+      options: {
+        outputStyle: 'expanded',
+        sourcemap: false
+      }
+    },
+    postcss: {
+      options: {
+        processors: [ require('autoprefixer')({browsers: 'last 2 versions'}) ],
+      },
+      main: {
+        src: '<%= paths.src %>/styles/*.css'
+      }
+    },
+    cssmin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: './',
+          src: ['<%= paths.src %>/styles/*.css'],
+          dest: '<%= paths.dist %>/styles',
+          ext: '.css'
+        }]
+      }
+    },
+    clean: {
+      dist: ['<%= paths.dist %>']
+    },
+    copy: {
+      dist: {
+        files: [
+          {
+            expand: true,
+            cwd: '<%= paths.src %>',
+            src: [
+              '.htaccess',
+              'index.html',
+              'scripts/*.js'
+            ],
+            dest: '<%= paths.dist %>'
+          }
+        ]
+      }
+    },
+    watch: {
+      sass: {
+        files: ['<%= paths.src %>/styles/scss/*.scss', '<%= paths.src %>/styles/scss/partials/{,*/}*.scss'],
+        tasks: ['sass', 'postcss']
+      }
+    }
+  };
 
-		banner:
-		'/** \n' +
-		' * @authors <%= pkg.authors %> \n' +
-		' * @version <%= pkg.version %> \n' +
-		' * @description <%= pkg.description %> \n' +
-		' * @license <%= pkg.license %> \n' +
-		' */ ',
+  // Pass in the big config object to initialize Grunt
+  grunt.initConfig(config);
 
-		paths: {
-			assets: 'assets/',
-			source: 'src/',
-			distribution: 'dist/',
-			lib: '<%= paths.assets %>lib/',
-			css: {
-				src: '<%= paths.source %>scss/',
-				dist: '<%= paths.distribution %>css/',
-				asst: '<%= paths.assets %>css/'
-			},
-			js: {
-				src: '<%= paths.source %>js/',
-				dist: '<%= paths.distribution %>js/',
-				asst: '<%= paths.assets %>js/'
-			}
-		},
-
-		version: {
-			project: {
-				src: ['package.json', 'bower.json']
-			},
-
-			scss: {
-				options: {
-					prefix: '@version\\s*'
-				},
-				src: ['<%= paths.css.src %>*.scss']
-			}
-		},
-
-		concat: {
-			options: {
-				separator: ';',
-				banner: '<%= banner %>'
-			},
-			main: {
-				// concatenate libraries with general.js > main.js
-				src: [
-					'<%= paths.lib %>classie/classie.js',
-
-					'<%= paths.js.src %>/custom.js'
-				],
-				dest: 
-				'<%= paths.js.dist %>main.js'
-			}
-		},
-
-		// minify the sources
-		uglify: {
-			js: {
-				files: [
-					{
-						'<%= paths.js.dist %>main.min.js': [
-							'<%= paths.js.dist %>main.js'
-						]
-					}
-				]
-			}
-		},
-
-		sass: {
-			// compile different stylesheets to be loaded async
-			main: {
-				files: [{
-					expand: true,
-					cwd: '<%= paths.css.src %>',
-					src: ['*.scss'],
-					dest: '<%= paths.css.dist %>',
-					ext: '.css'
-				}]
-
-			},
-
-			// pass in the options object for sass
-			options: {
-				style: 'compressed',
-				sourcemap: 'file'
-			}
-		},
-
-		copy: {
-			sass: {
-				files: [{
-						expand: true,
-						flatten: true,
-						src: [
-							'<%= paths.css.dist %>*'
-						],
-						dest: '<%= paths.css.asst %>'
-					}]
-			},
-			js: {
-				files: [{
-						expand: true,
-						flatten: true,
-						src: [
-							'<%= paths.js.dist %>*.js'
-						],
-						dest: '<%= paths.js.asst %>'
-					}]
-			}
-		},
-
-		// watch: rebuild parts of site on file change
-		watch: {
-			sass: {
-				files: ['<%= paths.css.src %>**/*.scss'],
-				tasks: ['sass', 'copy:sass']
-			},
-
-			js: {
-				files: ['<%= paths.js.src %>/*.js'],
-				tasks: ['concat', 'uglify', 'copy:js']
-			}
-		}
-	};
-
-	// Pass in the big config object to initialize Grunt
-	grunt.initConfig(config);
-
-	grunt.registerTask(
-		'build',
-		'Build the stylesheet and the scripts',
-		[
-			'sass',
-			'concat',
-			'uglify',
-			'copy'
-		]
-	);
-	
-	grunt.registerTask(
-		'dev',
-		'Build the files and watch for changes',
-		[
-			'build',
-			'watch'
-		]
-	);
-
-	grunt.registerTask(
-		'default',
-		'Run the build task',
-		['build']
-	);
+  grunt.registerTask(
+    'build',
+    'Build the stylesheet and the script',
+    [
+      'clean:dist',
+      'sass',
+      'postcss',
+      'cssmin',
+      'copy:dist',
+      'uglify'
+    ]
+  );
+  grunt.registerTask(
+    'dev',
+    'Build the files and watch for changes',
+    [
+      'sass',
+      'postcss',
+      'watch'
+    ]
+  );
+  grunt.registerTask(
+    'default',
+    'Run the build task',
+    [ 'build' ]
+  );
 
 };
