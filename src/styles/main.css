@@ -340,7 +340,7 @@ q:before, q:after {
   margin: 0.4em;
   font-family: sans-serif;
   font-size: 14px;
-  text-decoration: none;
+  text-decoration: none !important;
   border: 0;
   box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -1073,11 +1073,10 @@ table tfoot th {
 }
 
 table caption {
-  padding: 0.75em 0;
+  margin: 0.4em 0;
   text-align: left;
   font-style: normal;
   font-size: 19.6px;
-  border-bottom: 2px solid #ccc;
 }
 
 body {

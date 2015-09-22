@@ -24,9 +24,8 @@ table tfoot th {
 }
 
 table caption {
-  padding: $spacing-sm 0;
+  margin: $spacing-xs 0;
   text-align: left;
   font-style: normal;
   font-size: $font-size-lg;
-  border-bottom: $border-width + 1 solid $gray-light;
 }
