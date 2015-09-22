@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
   <head>
     <meta charset="utf-8">
     <title>&lt;Title&gt;</title>
@@ -14,12 +14,12 @@
   <body>
     <!--[if lt IE 8]><p class="browserupgrade container">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
     <header>
-      <nav class="navbar">
+      <nav class="navbar clearfix">
         <div class="container">
-          <ul class="nav-list">
-            <li><a>XXX</a></li>
-            <li><a>XXX</a></li>
-            <li><a>XXX</a></li>
+          <ul class="nav-list right">
+            <li><a href="#get-started">Getting started</a></li>
+            <li><a href="#components">Components</a></li>
+            <li><a href="https://github.com/loup-brun/basal">GitHub</a></li>
           </ul>
         </div>
       </nav>
@@ -28,18 +28,18 @@
       <article class="container">
         <h1>Basal</h1>
 
-        <p>Basal is a lightweight, cross-browser framework for web projects. The main goal is to provide a drop-in unobtrusive modern framework to start designing a site right away, with the use of a powerful <a href="http://sass-lang.com">CSS preprocessor</a>.</p>
+        <p>Basal is a lightweight, cross-browser framework for web projects. The main goal is to provide a drop-in unobtrusive modern framework to start designing a site right away, with the use <a href="http://sass-lang.com">SASS</a>, a powerful CSS preprocessor.</p>
 
         <hr />
 
-        <section>
+        <section id="get-started">
           <h2>Getting started</h2>
 
-          <p><a href="https://github.com/loup-brun/basal">Download</a> Basal, then run <code>npm install</code> (assuming you have <a href="https://nodejs.org">Node.js</a> installed on your system). You're ready to go.</p>
+          <p><a href="https://github.com/loup-brun/basal">Download</a> Basal, then run <code>npm install</code> (assuming you have <a href="https://nodejs.org">Node.js</a> installed on your system) in the root directory of the project. You're ready to go.</p>
         </section>
 
 
-        <section>
+        <section id="components">
           <h2>Components</h2>
 
           <h3>Bloquotes</h3>
@@ -240,6 +240,12 @@
         </section>
       </article>
     </main>
+    
+    <footer class="pagefooter">
+      <div class="container">
+        <p>Made by <a href="http://github.com/loup-brun">@loup-brun</a></p>
+      </div>
+    </footer>
 
     <script src="scripts/main.js"></script>
   </body>

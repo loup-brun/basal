@@ -198,7 +198,7 @@ i, em, .em, dfn, blockquote footer cite, q {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
   background-color: transparent;
 }
 
@@ -983,7 +983,6 @@ menu, ol, ul {
   display: block;
   padding: 0.75em;
   cursor: pointer;
-  color: inherit;
 }
 
 img {
@@ -1106,6 +1105,15 @@ code, pre, kbd, sample {
 pre code {
   background-color: transparent;
   border: 0;
+}
+
+.navbar {
+  background-color: #eee;
+}
+
+.pagefooter {
+  padding: 1.5em;
+  background-color: #eee;
 }
 
 .grid-block {

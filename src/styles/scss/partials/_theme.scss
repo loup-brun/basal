@@ -30,6 +30,15 @@ pre code {
   border: 0;
 }
 
+.navbar {
+  background-color: $gray-lighter;
+}
+
+.pagefooter {
+  padding: $spacing-lg;
+  background-color: $gray-lighter;
+}
+
 @include mquery(map-get($breakpoints, sm)) {
   // styles on small devices
   

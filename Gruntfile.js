@@ -88,7 +88,8 @@ module.exports = function(grunt) {
             src: [
               '.htaccess',
               'index.html',
-              'scripts/*.js'
+              'scripts/*.js',
+              'img/**/*'
             ],
             dest: '<%= paths.dist %>'
           }
