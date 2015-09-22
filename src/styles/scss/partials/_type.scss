@@ -17,13 +17,13 @@ i, em, .em { font-style: italic; }
 
 // Links
 a {
-  text-decoration: underline;
+  text-decoration: none;
   // Remove the gray background color from active links in IE 10.
   background-color: transparent;
 
-  &:hover { text-decoration: none; }
+  &:hover { text-decoration: underline; }
   &:focus { outline: none; }
-  &:active, a:hover { outline: none; }
+  &:active, &:hover { outline: none; }
 }
 
 // Paragraph and Small
