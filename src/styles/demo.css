@@ -1,3 +1,27 @@
+hr {
+  background-color: #ccc;
+}
+
+.navbar {
+  background-color: #eee;
+}
+
+code, pre, kbd, sample {
+  background-color: #eee;
+  color: #666;
+  border: 1px solid #ccc;
+}
+
+pre code {
+  background-color: transparent;
+  border: 0;
+}
+
+.pagefooter {
+  padding: 1.5em;
+  background-color: #eee;
+}
+
 .grid-block {
   padding: 1em 0;
   margin-top: 1em;
