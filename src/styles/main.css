@@ -376,6 +376,10 @@ q:before, q:after {
   background-color: #72c45b;
 }
 
+.btn-primary:active {
+  background-color: #5ab641;
+}
+
 .btn-secondary {
   background-color: #902BEF;
   color: #fff;
@@ -383,6 +387,10 @@ q:before, q:after {
 
 .btn-secondary:focus, .btn-secondary:hover {
   background-color: #9a3ef0;
+}
+
+.btn-secondary:active {
+  background-color: #8618ee;
 }
 
 .btn-tertiary {
@@ -394,6 +402,10 @@ q:before, q:after {
   background-color: #4fc5d0;
 }
 
+.btn-tertiary:active {
+  background-color: #34b7c3;
+}
+
 .btn-danger {
   background-color: #E92B49;
   color: #fff;
@@ -403,6 +415,10 @@ q:before, q:after {
   background-color: #eb3d59;
 }
 
+.btn-danger:active {
+  background-color: #e71939;
+}
+
 .btn-default {
   background-color: #ccc;
   color: #111;
@@ -410,6 +426,10 @@ q:before, q:after {
 
 .btn-default:focus, .btn-default:hover {
   background-color: #d6d6d6;
+}
+
+.btn-default:active {
+  background-color: #c2c2c2;
 }
 
 .btn[disabled],
