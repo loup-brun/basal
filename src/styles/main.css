@@ -214,6 +214,10 @@ a:active, a:hover {
   outline: none;
 }
 
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
 p {
   margin: 0 0 1.5em 0;
 }
@@ -344,6 +348,10 @@ q:before, q:after {
   border: 0;
   box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .btn:active {
