@@ -385,30 +385,30 @@ q:before, q:after {
 }
 
 .btn-secondary {
-  background-color: #497180;
+  background-color: #570F5D;
   color: #fff;
 }
 
 .btn-secondary:focus, .btn-secondary:hover {
-  background-color: #507c8d;
+  background-color: #67126f;
 }
 
 .btn-tertiary {
-  background-color: #E9BF37;
-  color: #fff;
+  background-color: #F7C45B;
+  color: #111;
 }
 
 .btn-tertiary:focus, .btn-tertiary:hover {
-  background-color: #ebc549;
+  background-color: #f8cb6e;
 }
 
 .btn-danger {
-  background-color: #D15344;
+  background-color: #E92B49;
   color: #fff;
 }
 
 .btn-danger:focus, .btn-danger:hover {
-  background-color: #d56254;
+  background-color: #eb3d59;
 }
 
 .btn-default {
