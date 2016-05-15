@@ -86,7 +86,6 @@ module.exports = function(grunt) {
             expand: true,
             cwd: '<%= paths.src %>',
             src: [
-              '.htaccess',
               'index.html',
               'scripts/*.js',
               'img/**/*'

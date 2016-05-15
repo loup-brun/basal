@@ -198,20 +198,24 @@ i, em, .em, dfn, blockquote footer cite, q {
 }
 
 a {
-  text-decoration: underline;
+  text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:focus {
   outline: none;
 }
 
-a:active, a a:hover {
+a:active, a:hover {
   outline: none;
+}
+
+a, button {
+  -webkit-tap-highlight-color: transparent;
 }
 
 p {
@@ -274,27 +278,27 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1 {
-  font-size: 2.5em;
+  font-size: 3em;
 }
 
 h2, .h2 {
-  font-size: 1.8em;
+  font-size: 2.5em;
 }
 
 h3, .h3 {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 h4, .h4 {
-  font-size: 1.33em;
+  font-size: 1.5em;
 }
 
 h5, .h5 {
-  font-size: 1.15em;
+  font-size: 1.25em;
 }
 
 h6, .h6 {
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 .unstyled-heading {
@@ -340,10 +344,14 @@ q:before, q:after {
   margin: 0.4em;
   font-family: sans-serif;
   font-size: 14px;
-  text-decoration: none;
+  text-decoration: none !important;
   border: 0;
   box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .btn:active {
@@ -462,7 +470,7 @@ textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
   font-style: normal;
-  line-height: normal;
+  line-height: 1.6;
   background-color: #fff;
   border: 1px solid #ccc;
   color: #111;
@@ -501,7 +509,7 @@ input[type=radio] {
 }
 
 button, input {
-  line-height: normal;
+  line-height: 1.6;
 }
 
 button, select {
@@ -1073,11 +1081,10 @@ table tfoot th {
 }
 
 table caption {
-  padding: 0.75em 0;
+  margin: 0.4em 0;
   text-align: left;
   font-style: normal;
   font-size: 19.6px;
-  border-bottom: 2px solid #ccc;
 }
 
 body {

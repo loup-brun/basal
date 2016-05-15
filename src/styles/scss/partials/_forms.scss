@@ -36,7 +36,7 @@ textarea {
   -webkit-appearance: none; // Remove Default Browser Behaviour for Safari
   -moz-appearance: none; // Remove Default Browser Behaviour for Firefox
   font-style: normal;
-  line-height: normal;
+  line-height: $line-height;
   background-color: #fff;
   border: $border-width solid $gray-light;
   color: $gray-darker;
@@ -67,7 +67,7 @@ input[type=radio] {
   }
 }
 
-button, input { line-height: normal; }
+button, input { line-height: $line-height; }
 button, select { text-transform: none; }
 
 textarea {
