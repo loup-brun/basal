@@ -49,6 +49,6 @@
 
 .btn[disabled],
 .btn.disabled {
-  color: $gray;
-  background-color: $gray-lighter;
+  opacity: 0.8;
+  pointer-events: none;
 }
