@@ -20,10 +20,11 @@ a {
   text-decoration: none;
   // Remove the gray background color from active links in IE 10.
   background-color: transparent;
+  -webkit-text-decoration-skip: objects;
 
   &:hover { text-decoration: underline; }
   &:focus { outline: none; }
-  &:active, &:hover { outline: none; }
+  &:active, &:hover { outline-width: 0; }
 }
 
 a, button {
@@ -39,7 +40,9 @@ pre { margin: $spacing-sm 0; }
 
 // Abbreviations
 abbr[title], .abbr[title] {
-  border-bottom: $border-width dotted;
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
   cursor: help;
 }
 
@@ -68,7 +71,7 @@ hr {
 small, .small { font-size: $font-size-sm; }
 
 sub, sup {
-  font-size: $font-size-sm;
+  font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;

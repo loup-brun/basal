@@ -5,13 +5,15 @@
 // Images
 img {
   border: 0;
-  -ms-interpolation-mode: bicubic;
 }
+
 .responsive-img {
   max-width: 100%;
   height: auto;
 }
+
 svg:not(:root) { overflow: hidden; }
+
 figure { margin: 0; }
 
 // Audio
@@ -24,6 +26,6 @@ video {
 }
 
 audio:not([controls]) {
-  @extend .none;
+  display: none;
   height: 0;
 }

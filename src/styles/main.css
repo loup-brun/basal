@@ -200,6 +200,7 @@ i, em, .em, dfn, blockquote footer cite, q {
 a {
   text-decoration: none;
   background-color: transparent;
+  -webkit-text-decoration-skip: objects;
 }
 
 a:hover {
@@ -211,7 +212,7 @@ a:focus {
 }
 
 a:active, a:hover {
-  outline: none;
+  outline-width: 0;
 }
 
 a, button {
@@ -223,11 +224,13 @@ p {
 }
 
 pre {
-  margin: 0.75em 0;
+  margin: 0.8em 0;
 }
 
 abbr[title], .abbr[title] {
-  border-bottom: 1px dotted;
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
   cursor: help;
 }
 
@@ -255,7 +258,7 @@ small, .small {
 }
 
 sub, sup {
-  font-size: 11.2px;
+  font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -271,7 +274,7 @@ sub {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  margin: 1em 0 0.4em;
+  margin: 1em 0 0.5em;
   line-height: normal;
   font-weight: normal;
   font-family: sans-serif;
@@ -340,8 +343,8 @@ q:before, q:after {
 .btn {
   display: inline-block;
   border-radius: 3px;
-  padding: 0.4em 0.75em;
-  margin: 0.4em;
+  padding: 0.5em 0.8em;
+  margin: 0.5em;
   font-family: sans-serif;
   font-size: 14px;
   text-decoration: none !important;
@@ -420,7 +423,7 @@ q:before, q:after {
 }
 
 code, kbd, pre, samp {
-  padding: 0.4em;
+  padding: 0.5em;
   font-family: monospace;
   line-height: normal;
   font-weight: normal;
@@ -466,7 +469,7 @@ input[type=tel],
 textarea {
   display: block;
   width: 100%;
-  padding: 0.75em;
+  padding: 0.8em;
   -webkit-appearance: none;
   -moz-appearance: none;
   font-style: normal;
@@ -496,7 +499,7 @@ input[type=radio] {
 
 .checkbox {
   display: block;
-  margin: 0.4em 0;
+  margin: 0.5em 0;
 }
 
 .checkbox input[type=checkbox],
@@ -505,7 +508,7 @@ input[type=radio] {
 }
 
 .checkbox label {
-  padding-left: 0.4em;
+  padding-left: 0.5em;
 }
 
 button, input {
@@ -553,7 +556,7 @@ input::-moz-focus-inner {
 
 .field-group {
   position: relative;
-  margin-top: 0.4em;
+  margin-top: 0.5em;
 }
 
 .container {
@@ -570,8 +573,8 @@ input::-moz-focus-inner {
 }
 
 .row {
-  margin-left: -0.4em;
-  margin-right: -0.4em;
+  margin-left: -0.5em;
+  margin-right: -0.5em;
   position: relative;
 }
 
@@ -585,8 +588,8 @@ input::-moz-focus-inner {
 }
 
 .row-sm {
-  padding-top: 0.75em;
-  padding-bottom: 0.75em;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
 }
 
 .row-lg {
@@ -595,8 +598,8 @@ input::-moz-focus-inner {
 }
 
 .col {
-  padding-left: 0.4em;
-  padding-right: 0.4em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   float: left;
 }
 
@@ -990,13 +993,12 @@ menu, ol, ul {
 
 .nav-list > li > a {
   display: block;
-  padding: 0.75em;
+  padding: 0.8em;
   cursor: pointer;
 }
 
 img {
   border: 0;
-  -ms-interpolation-mode: bicubic;
 }
 
 .responsive-img {
@@ -1021,6 +1023,7 @@ video {
 }
 
 audio:not([controls]) {
+  display: none;
   height: 0;
 }
 
@@ -1071,7 +1074,7 @@ table {
 
 table th,
 table td {
-  padding: 0.75em;
+  padding: 0.8em;
   border-bottom: 1px solid #ccc;
 }
 
@@ -1081,7 +1084,7 @@ table tfoot th {
 }
 
 table caption {
-  margin: 0.4em 0;
+  margin: 0.5em 0;
   text-align: left;
   font-style: normal;
   font-size: 19.6px;
