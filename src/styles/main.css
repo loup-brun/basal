@@ -418,8 +418,8 @@ q:before, q:after {
 
 .btn[disabled],
 .btn.disabled {
-  color: #999;
-  background-color: #eee;
+  opacity: 0.8;
+  pointer-events: none;
 }
 
 code, kbd, pre, samp {
