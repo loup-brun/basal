@@ -14,16 +14,6 @@ hr {
   background-color: $gray-lighter;
 }
 
-code, pre, kbd, sample {
-  background-color: $gray-lighter;
-  color: $gray-dark;
-  border: $border-width solid $gray-light;
-}
-
-pre code {
-  background-color: transparent;
-  border: 0;
-}
 .pagefooter {
   padding: $spacing-lg;
   background-color: $gray-lighter;
