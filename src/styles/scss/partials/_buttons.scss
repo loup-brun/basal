@@ -6,7 +6,7 @@
 
 .btn {
   display: inline-block;
-  padding: $spacing-xs $spacing-sm;
+  padding: $spacing-sm $spacing;
   margin: $spacing-xs;
   font-family: $font-family-body;
   font-size: $font-size;
@@ -21,7 +21,7 @@
   
   &.large-btn {
     font-size: $font-size-lg;
-  }
+  } 
 }
 
 .btn-primary {
