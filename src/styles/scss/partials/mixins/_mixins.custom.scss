@@ -1,0 +1,12 @@
+// ==========================================================================
+// Basal – Custom theme mixins
+// ==========================================================================
+
+@mixin bg($bg-color, $color: check-bg($bg-color)) {
+  background-color: $bg-color;
+  color: $color;
+}
+
+@mixin drop-shadow {
+  box-shadow: 0 1px 3px rgba(0,0,0,.4);
+}

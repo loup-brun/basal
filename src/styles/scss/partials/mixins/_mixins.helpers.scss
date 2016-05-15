@@ -1,0 +1,64 @@
+// ==========================================================================
+// Basal – Helper mixins
+// ==========================================================================
+
+// Functions
+@function check-bg($color, $light-color: #fff, $dark-color: $gray-darker) {
+  @if (lightness($color) > 60) {
+    @return $dark-color; // Lighter background, return dark color
+  } @else {
+    @return $light-color; // Darker background, return light color
+  }
+}
+
+// Shorthands
+@mixin clearfix {
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin mquery($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin square($size) {
+  @include size($size, $size);
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin horizontal-padding($value) {
+  padding-left: $value;
+  padding-right: $value;
+}
+
+@mixin vertical-padding($value) {
+  padding-top: $value;
+  padding-bottom: $value;
+}
+
+@mixin vertical-margin($value) {
+  margin-top: $value;
+  margin-bottom: $value;
+}
+
+@mixin horizontal-margin($value) {
+  margin-left: $value;
+  margin-right: $value;
+}
