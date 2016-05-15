@@ -2,9 +2,9 @@
 // Mixins/Buttons
 // ==========================================================================
 
-@mixin btn-style($color) {
+@mixin btn-style($color, $text-color: check-bg($color)) {
   background-color: $color;
-  color: check-bg($color);
+  color: $text-color;
 
   &:focus, &:hover {
     background-color: lighten($color, 4%);
