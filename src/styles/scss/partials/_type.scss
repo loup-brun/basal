@@ -26,6 +26,10 @@ a {
   &:active, &:hover { outline: none; }
 }
 
+a, button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 // Paragraph and Small
 p {
   margin: 0 0 $spacing-lg 0;
