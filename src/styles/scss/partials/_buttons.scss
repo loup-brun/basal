@@ -6,27 +6,20 @@
 
 .btn {
   display: inline-block;
-  border-radius: $border-radius;
   padding: $spacing-xs $spacing-sm;
   margin: $spacing-xs;
   font-family: $font-family-body;
   font-size: $font-size;
   text-decoration: none !important;
   border: 0;
-  box-shadow: inset 0 -2px 0 rgba(0,0,0,0.2); 
   cursor: pointer;
   user-select: none;
   
-  &:active {
-    transform: translateY(1px);
-    box-shadow: inset 0 0 0 $spacing-xl rgba(0,0,0,0.1);
-  }
-  
-  &.-sm {
+  &.small-btn {
     font-size: $font-size-sm;
   }
   
-  &.-lg {
+  &.large-btn {
     font-size: $font-size-lg;
   }
 }
