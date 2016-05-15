@@ -6,6 +6,8 @@ body {
   font-family: $font-family-body;
   font-size: $font-size;
   line-height: $line-height;
+  background-color: #fff;
+  color: $gray-dark;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -21,6 +23,7 @@ a {
   // Remove the gray background color from active links in IE 10.
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  color: $color-primary;
 
   &:hover { text-decoration: underline; }
   &:focus { outline: none; }

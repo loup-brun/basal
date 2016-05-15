@@ -10,6 +10,8 @@ blockquote {
   border-style: solid;
   border-color: $gray-lighter;
   border-left-width: $border-width-thick;
+  color: $gray-dark;
+
   &.text-right {
     border-left-width: 0;
     border-right-width: $border-width-thick;
