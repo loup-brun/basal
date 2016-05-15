@@ -570,8 +570,8 @@ input::-moz-focus-inner {
 }
 
 .row {
-  margin-left: -0.75em;
-  margin-right: -0.75em;
+  margin-left: -0.4em;
+  margin-right: -0.4em;
   position: relative;
 }
 
@@ -595,8 +595,8 @@ input::-moz-focus-inner {
 }
 
 .col {
-  padding-left: 0.75em;
-  padding-right: 0.75em;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
   float: left;
 }
 
