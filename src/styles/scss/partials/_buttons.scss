@@ -5,15 +5,8 @@
 @import 'mixins/mixins.buttons';
 
 .btn {
-  display: inline-block;
-  padding: $spacing-sm $spacing;
+  @include btn-common($spacing-sm, $spacing);
   margin: $spacing-xs;
-  font-family: $font-family-body;
-  font-size: $font-size;
-  text-decoration: none !important;
-  border: 0;
-  cursor: pointer;
-  user-select: none;
   
   &.small-btn {
     font-size: $font-size-sm;
