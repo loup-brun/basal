@@ -931,37 +931,17 @@ input::-moz-focus-inner {
   }
 }
 
-dl, menu, ol, ul {
-  margin: 0 0 1em;
+ol, ul {
+  margin: 1em 0;
+  padding: 0 0 0 1em;
 }
 
-dd,
-ul ul,
-ol ol,
-ul ol,
-ol ul {
-  margin: 0;
-}
-
-dt {
+dl dt {
   font-style: normal;
 }
 
-dd {
+dl dd {
   margin-bottom: 1em;
-}
-
-menu, ol, ul {
-  padding: 0 0 0 1em;
-}
-
-nav ul, nav ol {
-  list-style: none;
-  list-style-image: none;
-}
-
-menu, ol, ul {
-  padding: 0 0 0 1em;
 }
 
 .unstyled-list, .inline-list {

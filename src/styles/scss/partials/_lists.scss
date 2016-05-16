@@ -2,31 +2,25 @@
 // Lists & Navs
 // ==========================================================================
 
-dl, menu, ol, ul { margin: 0 0 $spacing }
-dd,
-ul ul,
-ol ol,
-ul ol,
-ol ul {
-  margin: 0;
+ol, ul {
+  margin: $spacing 0;
+  padding: 0 0 0 $spacing;
 }
 
-dt { font-style: normal }
-dd {
-  margin-bottom: $spacing;
-}
+dl {
+  dt {
+    font-style: normal;
+  }
 
-menu, ol, ul { padding: 0 0 0 $spacing; }
-nav ul, nav ol {
-  list-style: none;
-  list-style-image: none;
+  dd {
+    margin-bottom: $spacing;
+  }
 }
-
-menu, ol, ul { padding: 0 0 0 $spacing; }
 
 // Remove Styling from List
 .unstyled-list {
   @include list-reset;
+  
   li {
     margin-top: 0;
     margin-bottom: 0;
