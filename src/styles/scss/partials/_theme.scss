@@ -2,6 +2,8 @@
 // Theme styles
 // ==========================================================================
 
+// Styles on every device
+
 @include mquery(map-get($breakpoints, sm)) {
   // styles on small devices
   
