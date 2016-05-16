@@ -440,20 +440,14 @@ q:before, q:after {
 }
 
 code, kbd, pre, samp {
-  padding: 0.5em;
   font-family: monospace;
   line-height: normal;
   font-weight: normal;
   word-wrap: break-word;
-  border-radius: 3px;
 }
 
 pre {
   overflow-x: auto;
-}
-
-pre code {
-  display: block;
 }
 
 fieldset {
